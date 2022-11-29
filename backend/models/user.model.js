@@ -17,7 +17,10 @@ module.exports = (sequelize, Sequelize) => {
   User.associate = function(models) {
     User.belongsTo(models.role, {
       onDelete: "CASCADE",
-      foreignKey: "role_id",
+      foreignKey: {
+        field: 'role_id',
+        defaultValue: 2
+      },
       as: "roles",
     })
   }
