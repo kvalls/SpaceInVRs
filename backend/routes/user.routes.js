@@ -1,6 +1,7 @@
 module.exports = app => {
     const users = require("../controllers/user.controller.js");
     const auth = require("../controllers/auth.js");
+    var upload = require('../multer/upload');
   
     var router = require("express").Router();
   
@@ -14,7 +15,7 @@ module.exports = app => {
     router.get("/:id", auth.isAuthenticated, users.findOne);
   
     // Update a User with id
-    router.put("/:id", auth.isAuthenticated, users.update);
+    router.put("/:id", auth.isAuthenticated, upload.single('file'), users.update);
 
     // Sign in
     router.post("/signin", auth.signin);
