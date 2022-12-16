@@ -5,9 +5,14 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
  
+var path = require('path');
+
 const app = express();
 const port = process.env.PORT || 4000;
  
+// public directory
+app.use(express.static(path.join(__dirname, 'public')));
+
 var corsOptions = {
   origin: "http://localhost:8100"
 };
