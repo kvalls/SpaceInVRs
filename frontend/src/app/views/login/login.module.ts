@@ -1,3 +1,4 @@
+import { ComponentsModule } from './../../components/components.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -14,7 +15,8 @@ import { LoginPage } from './login.page';
     FormsModule,
     IonicModule,
     LoginPageRoutingModule,
-    FormsModule
+    FormsModule,
+    ComponentsModule
   ],
   declarations: [LoginPage]
 })

@@ -1,20 +1,34 @@
+.login{
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+}
+
+.header{
+  color:#4E0000;
+  background:#4E0000;
+
+}
+
+ion-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 ion-title {
-  --color: #f10b0b;
-  --position: sticky;
-  --padding-bottom: 10px;
-  --height: 55px;
-  --left: 0;
-  --top: 0;
-  --right: 0;
-  --margin-bottom: 30px;
-  --display: flex;
-  --justify-content: center;
-  --align-items: center;
   --text-transform: capitalize;
   --font-size: 40px;
   --font-weight: bold;
 }
 
 ion-header {
---padding-bottom: 15px;
+  --padding-bottom: 15px;
+  --top: 0;
+  --color: #4E0000;
+  --background: #4E0000;
+  --position: sticky;
+  z-index: 1;
 }

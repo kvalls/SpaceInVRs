@@ -1,4 +1,4 @@
-import { HeaderComponent } from './components/header/header.component';
+import { ComponentsModule } from './components/components.module';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,15 +9,14 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
-import { FooterComponent } from './components/footer/footer.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './shared/auth/auth.module';
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent, HeaderComponent],
-  entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AuthModule],
+  declarations: [AppComponent],
+  entryComponents: [AppComponent],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AuthModule, ComponentsModule],
   providers: [
     StatusBar,
     SplashScreen,
