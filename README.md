@@ -34,3 +34,5 @@ cd /frontend
 npm install
 ionic serve
 ```
+
+The website should start up now.
