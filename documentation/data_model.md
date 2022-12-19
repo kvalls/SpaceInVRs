@@ -1,5 +1,7 @@
 ## Data Model
 
+# Structure
+
 > **Users**
 - _id:_ Primary key that identifies the user
 - _role_id:_ Foreign key of the role the user has
@@ -23,3 +25,10 @@
 > **Relationships**
 - _Role/User:_ One-To-Many, many users can have the same role
 - _User/Session:_ One-To-Many, an user can have many sessions
+
+#Entity-Relationship Diagram
+
+#Relational Diagram
+
+#UML Diagram
+
