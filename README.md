@@ -30,6 +30,7 @@ This project was assigned by Aiju.
 
 * [Visual Studio Code](https://code.visualstudio.com/) - The IDE used in this project.
 * [Node.js](https://nodejs.org/en/docs/) - As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications.
+* [Sequelize](https://sequelize.org/docs/v6/) - Sequelize is a modern TypeScript and Node.js ORM for Oracle, Postgres, MySQL, MariaDB, SQLite and SQL Server, and more.
 * [MySQL](https://dev.mysql.com/doc/) - MySQL is the world's most popular open source database.
 * [Angular](https://angular.io/docs) - Angular is an application-design framework and development platform for creating efficient and sophisticated single-page apps.
 * [Ionic 6](https://ionicframework.com/docs/intro) - Ionic Framework is an open source UI toolkit for building performant, high-quality mobile and desktop apps using web technologies (HTML, CSS, and JavaScript).
