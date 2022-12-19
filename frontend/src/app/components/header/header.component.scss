@@ -1,9 +1,27 @@
+.parent{
+  display:flex;
+}
+
 .login{
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
   align-items: center;
   justify-content: center;
+  flex: 1;
+
+}
+.right{
+  flex: 1;
+
+}
+
+.center{
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  color:#ffffff;
+  font-size: 40px;
 }
 
 .header{
@@ -13,9 +31,8 @@
 }
 
 ion-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
 }
 
 ion-title {
@@ -32,3 +49,4 @@ ion-header {
   --position: sticky;
   z-index: 1;
 }
+
