@@ -10,6 +10,7 @@ git clone https://github.com/kvalls/SpaceInVRs.git
 ```
 
 Create an empty MySQL database, in this case it's called "db_spaceinvrs_dev"
+
 Then configure the backend to use that database in /backend/.env:
 ```
 MYSQL_DATABASE=db_spaceinvrs_dev
