@@ -1,6 +1,6 @@
-## Data Model
+# Data Model
 
-# Structure
+## Structure
 
 > **Users**
 - _id:_ Primary key that identifies the user
@@ -26,9 +26,9 @@
 - _Role/User:_ One-To-Many, many users can have the same role
 - _User/Session:_ One-To-Many, an user can have many sessions
 
-#Entity-Relationship Diagram
-
-#Relational Diagram
-
-#UML Diagram
-
+## Entity-Relationship Diagram
+[alt text](documentation\images\Entity-Relationship Diagram.jpg)
+## Relational Diagram
+[alt text](documentation\images\Relational Diagram.jpg)
+## UML Diagram
+[alt text](documentation\images\UML Diagram.png)
