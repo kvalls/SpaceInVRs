@@ -6,28 +6,7 @@
 
 <app-header></app-header>
 <ion-content>
-  <form #form="ngForm" (ngSubmit)="login(form)">
-    <ion-grid>
-      <ion-row color="black" class="ion-justify-content-center">
-        <ion-col size-md="6" size-lg="5" size-xs="12">
-          <div>
-            <ion-item>
-              <ion-input name="email" type="email" placeholder="your@email.com" ngModel required></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
-            </ion-item>
-          </div>
-          <div  class="buttons">
-            <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block">Login</ion-button>
-          </div>
-          <div  class="buttons">
-            <ion-button size="large" routerLink='/register' expand="block">Register</ion-button>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </form>
+  <app-login-form></app-login-form>
 </ion-content>
 
 <app-footer></app-footer>

@@ -1,3 +1,4 @@
+import { LoginFormComponent } from './login-form/login-form.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
@@ -13,7 +14,8 @@ import { HeaderComponent } from "./header/header.component";
 const components = [
     HeaderComponent,
     FooterComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    LoginFormComponent
 ]
 
 @NgModule({
