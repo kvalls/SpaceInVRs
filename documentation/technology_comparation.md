@@ -1,6 +1,6 @@
 ## Backend
 
-In this project we're using Node.js instead of Spring Boot.
+In this project we're using Node.js with Sequelize instead of Spring Boot.
 
 Node.js is an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications. Node.js applications are both asynchronous and non-blocking, whereas Spring Boot Java has a blocking I/O. Node.js developers can send many requests at the same time. Node.js also follows the agile development methodology which is ideal for enterprise application development projects that demand scalability. Additionally, Node.js does not require managing multiple threads, which is a problem associated with Spring Boot.
 
