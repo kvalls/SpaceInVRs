@@ -27,8 +27,8 @@
 - _User/Session:_ One-To-Many, an user can have many sessions
 
 ## Entity-Relationship Diagram
-[alt text](documentation\images\Entity-Relationship Diagram.jpg)
+[alt text](images\Entity-Relationship Diagram.jpg)
 ## Relational Diagram
-[alt text](documentation\images\Relational Diagram.jpg)
+[alt text](images\Relational Diagram.jpg)
 ## UML Diagram
-[alt text](documentation\images\UML Diagram.png)
+[alt text](images\UML Diagram.png)
