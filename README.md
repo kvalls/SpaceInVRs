@@ -72,3 +72,11 @@ ionic serve
 ```
 
 The website should start up now.
+
+## Conclusion
+
+I have gained a deeper understanding of web application development and how the different layers of a web application work together. Working with Node.js and Sequelize has allowed me to learn about server-side programming and database management, while using Angular and Ionic has given me experience with frontend development and mobile app development.
+
+I have also had the opportunity to learn about and utilize a variety of tools and technologies that are commonly used in web development, such as version control, debugging, and testing.
+
+Overall, completing this fullstack project has been a challenging and rewarding learning experience. I want to continue learning and growing as a developer.
