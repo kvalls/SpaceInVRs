@@ -1,5 +1,11 @@
 # SpaceInVRs
 
+## Documentation
+
+* [Data Model](/documentation/data_model.md)
+* [Technology comparation](/documentation/technology_comparation.md)
+* [User requirements](/documentation/user_requirements.md)
+
 
 ## Installation Manual
 
