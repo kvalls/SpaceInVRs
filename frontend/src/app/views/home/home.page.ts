@@ -14,7 +14,7 @@ export class HomePage {
   loginOrJustEnter(){
     this.authService.isLoggedIn().then(loggedIn => {
 
-      if(loggedIn){
+      if(this.authService.loginStatus==1){
         this.router.navigateByUrl("/profile");
         return;
       } 

@@ -1,11 +1,15 @@
 <ion-header class="header">
   <div class="parent">
   <ion-grid class="login" routerLink="/login">
-    <ion-row style="padding-left: 37px;">
+    <ion-row *ngIf="authService.loginStatus==0" style="padding-left: 37px;" >
+      <ion-icon name="person-outline" routerLink="/login"></ion-icon>
+    </ion-row>
+    <ion-row *ngIf="authService.loginStatus==1" style="padding-left: 45px;">
       <ion-icon name="person-outline" routerLink="/login"></ion-icon>
     </ion-row>
     <ion-row>
-      <ion-title routerLink="/login">Login</ion-title>
+      <ion-title *ngIf="authService.loginStatus==0" routerLink="/login">Login</ion-title>
+      <ion-title *ngIf="authService.loginStatus==1" (click)="logout()">Logout</ion-title>
     </ion-row>
   </ion-grid>
   <a class="center">SpaceInVRs</a>

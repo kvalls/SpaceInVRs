@@ -12,6 +12,12 @@ import { Storage } from '@ionic/storage';
 })
 export class AuthService {
 
+  public loginStatus = 0;
+
+  setLoginStatus(status: number) {
+    this.loginStatus = status;
+  }
+
   AUTH_SERVER_ADDRESS:  string  =  'http://localhost:4000';
 
   constructor(private  httpClient:  HttpClient, private  storage:  Storage) { }
@@ -69,8 +75,8 @@ export class AuthService {
     // return this.authSubject.asObservable();
     let token = await this.storage.get("token");
     if (token){ //Just check if exists. This should be checked with current date
-      return true;
-    }
-    return false;
+      this.setLoginStatus(1);
+    }else{
+    return this.setLoginStatus(0);}
   }
 }
