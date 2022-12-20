@@ -1,23 +1,42 @@
-<form #form="ngForm" (ngSubmit)="register(form)">
+<form [formGroup]="ionicForm" (ngSubmit)="register()" novalidate>
   <ion-grid>
     <ion-row color="black" class="ion-justify-content-center">
       <ion-col class="align-self-center" size-md="6" size-lg="5" size-xs="12">
         <div padding>
+          <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.required">
+            Name is required.
+          </span>
+          <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.minlength">
+            Name should be min 2 chars long.
+          </span>
           <ion-item>
-            <ion-input name="name" type="text" placeholder="Name" ngModel required></ion-input>
+            <ion-input formControlName="name" name="name" type="text" placeholder="Name"></ion-input>
           </ion-item>
+          <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.required">
+            Email is required.
+          </span>
+          <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.pattern">
+            Please provide a valid email.
+          </span>
           <ion-item>
-            <ion-input name="email" type="email" placeholder="your@email.com" ngModel required></ion-input>
+            <ion-input formControlName="email" name="email" type="email" placeholder="your@email.com" ngModel required></ion-input>
           </ion-item>
+          <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.required">
+            Password is required.
+          </span>
+          <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.minlength">
+            Password should be min 4 chars long.
+          </span>
           <ion-item>
-            <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
+            <ion-input formControlName="password" name="password" type="password" placeholder="Password" ngModel required></ion-input>
           </ion-item>
           <!-- <ion-item>
             <ion-input name="confirm" type="password" placeholder="Password again" ngModel required></ion-input>
           </ion-item> -->
         </div>
         <div padding>
-          <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block">Register</ion-button>
+          <ion-button size="large" type="submit" expand="block">Register</ion-button>
+          <!-- [disabled]="ionicForm.invalid -->
         </div>
       </ion-col>
     </ion-row>

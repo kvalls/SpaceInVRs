@@ -1,7 +1,7 @@
 import { ProfileCardComponent } from './profile-card/profile-card.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common"
@@ -25,7 +25,8 @@ const components = [
         CommonModule,
         IonicModule,
         RouterModule,
-        FormsModule
+        FormsModule,
+        ReactiveFormsModule
     ],
     declarations: components,
     exports: components

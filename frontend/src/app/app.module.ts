@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComponentsModule } from './components/components.module';
 
 import { NgModule } from '@angular/core';
@@ -16,7 +17,7 @@ import { AuthModule } from './shared/auth/auth.module';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AuthModule, ComponentsModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AuthModule, ComponentsModule, ReactiveFormsModule, FormsModule],
   providers: [
     StatusBar,
     SplashScreen,
