@@ -42,7 +42,8 @@ export class RegisterFormComponent implements OnInit {
         role_id: 2,
       };
       this.authService.register(user).subscribe((res) => {
-        this.router.navigateByUrl('home');
+        this.router.navigateByUrl('/profile');
+        this.ionicForm.reset();
       });
     }
     
