@@ -3,6 +3,7 @@ import { AuthService } from './../../shared/auth/auth.service';
 import { Router } from '@angular/router';
 import { User } from './../../shared/auth/user';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
 @Component({
   selector: 'app-login-form',
@@ -10,31 +11,53 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-form.component.scss'],
 })
 export class LoginFormComponent implements OnInit {
-
-  constructor(private router: Router, 
-    private authService: AuthService, 
+  ionicForm: FormGroup;
+  isSubmitted = false;
+  constructor(public formBuilder: FormBuilder,
+    private router: Router,
+    private authService: AuthService,
     private alertController: AlertController) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.ionicForm = this.formBuilder.group({
+      name: ['', [Validators.required, Validators.minLength(2)]],
+      email: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
+      password: ['', [Validators.required, Validators.minLength(4)]]
+    })
+  }
 
-  login(form){
-    let user: User = {
-      id: null,
-      email: form.value.email,
-      password: form.value.password,
-      name: null,
-      role_id: null,
-    };
-    this.authService.login(user).subscribe((res)=>{
-      if(!res.access_token) {
-        this.presentAlert("invalid credentials");
-        return;
-      }
-      this.router.navigateByUrl('/profile');
-      form.reset();
-    }, err => {
-      this.presentAlert("Error");
-    });
+  get errorControl() {
+    return this.ionicForm.controls;
+  }
+
+  login() {
+    this.isSubmitted = true;
+    if (!this.ionicForm.valid) {
+      console.log('Please provide all the required values!')
+      return false;
+    } else {
+      console.log(this.ionicForm.value)
+      let user: User = {
+        id: null,
+        email: this.ionicForm.value.email,
+        password: this.ionicForm.value.password,
+        name: null,
+        role_id: null,
+      };
+      this.authService.login(user).subscribe((res) => {
+        if (!res.access_token) {
+          this.presentAlert("invalid credentials");
+          return;
+        }
+        this.router.navigateByUrl('/profile');
+        this.ionicForm.reset();
+      }, err => {
+        this.presentAlert("Error");
+      });
+    }
+
+
+    
   }
 
   async presentAlert(message: string) {
