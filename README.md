@@ -55,11 +55,20 @@ MYSQL_ROOT_PASSWORD={yourpassword}
 ```
 
 
-Install dependencies and run backend:
+Install dependencies:
 
 ```
 cd /backend
 npm install
+```
+
+There are default Administrator and User roles, I added a migrations file for it so we'll run it:
+```
+sequelize-cli db:migrate
+```
+
+You can now start the backend:
+```
 npm start
 ```
 
