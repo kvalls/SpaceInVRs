@@ -14,7 +14,7 @@ This project was assigned by Aiju.
 
 ## Documentation
 
-* [Planification](https://github.com/users/kvalls/projects/1/views/1)
+* [Planification](/documentation/planification.md)
 * [Data Model](/documentation/data_model.md)
 * [Technology comparation](/documentation/technology_comparation.md)
 * [User requirements](/documentation/user_requirements.md)
