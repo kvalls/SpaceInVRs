@@ -1,3 +1,4 @@
+import { ProfileCardComponent } from './profile-card/profile-card.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { FormsModule } from '@angular/forms';
@@ -15,7 +16,8 @@ const components = [
     HeaderComponent,
     FooterComponent,
     RegisterFormComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    ProfileCardComponent
 ]
 
 @NgModule({

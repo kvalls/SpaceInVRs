@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { catchError, tap } from 'rxjs/operators';
 import { User } from '../auth/user';
 import { Storage } from '@ionic/storage';
 
@@ -41,4 +41,21 @@ export class UserService {
     //     })
     // );
   }
+
+  getUser(id): Observable<User[]> {
+    return this.httpClient.get<User[]>(`${this.AUTH_SERVER_ADDRESS}/api/users/` + id)
+      .pipe(
+        tap(_ => console.log(`User fetched: ${id}`)),
+        catchError(this.handleError<User[]>(`Get User id=${id}`))
+      );
+  }
+
+
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error);
+      console.log(`${operation} failed: ${error.message}`);
+      return of(result as T);
+    };
+  }  
 }
