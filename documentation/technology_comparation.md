@@ -7,7 +7,7 @@ Node.js is an event-driven, non-blocking I/O model that makes it lightweight and
 
 ## Frontend
 
-We're using Angular with Ionic, making it a native app.
+We're using Angular with Ionic, making it a hybrid app.
 
 Ionic Angular is a great choice for creating hybrid mobile apps, as it provides a robust UI framework with many built-in components and features. It is also easy to learn and use, and provides a great development experience. React, on the other hand, is a great choice for creating single-page web apps, as it provides a powerful library for building user interfaces, as well as an extensive ecosystem of tools and libraries. React is also highly customisable, allowing developers to build custom components and tailor their apps to their specific needs. However, React is not as well suited for creating hybrid mobile apps, as it does not offer the same level of built-in components and features as Angular with Ionic.
 
