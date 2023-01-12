@@ -35,7 +35,7 @@ export class LoginFormComponent implements OnInit {
       console.log('Please provide all the required values!')
       return false;
     } else {
-      console.log(this.ionicForm.value)
+      console.log(this.ionicForm.value);
       let user: User = {
         id: null,
         email: this.ionicForm.value.email,
@@ -48,6 +48,7 @@ export class LoginFormComponent implements OnInit {
           this.presentAlert("invalid credentials");
           return;
         }
+        // this.authService.isLoggedIn();
         this.router.navigateByUrl('/profile');
         this.ionicForm.reset();
       }, err => {

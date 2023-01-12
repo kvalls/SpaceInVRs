@@ -49,6 +49,7 @@ export class AuthService {
 
         if (res.user) {
           await this.storage.set("token", res.access_token);
+          await this.storage.set("userdata", res.user);
         }
       })
 
@@ -60,8 +61,10 @@ export class AuthService {
       tap(async (res: AuthResponse) => {
 
         if (res.user) {
+          this.setLoginStatus(1);
           await this.storage.set("token", res.access_token);
-          // await this.storage.set("idUser", res.user.id);
+          await this.storage.set("userdata", res.user);
+          console.log("ey "+res.user.id+" ey");
         }
       })
     );
@@ -69,11 +72,22 @@ export class AuthService {
 
   async logout() {
     await this.storage.remove("token");
+    await this.storage.remove("userdata");
+  }
+
+  async setUserData(userData){
+    userData = await this.storage.get("userdata");
+  }
+
+  async getUserData(){
+    let userData = await this.storage.get("userdata");
+    return userData;
   }
 
   async isLoggedIn() {
     // return this.authSubject.asObservable();
     let token = await this.storage.get("token");
+    console.log("isLoggedIn", token);
     if (token){ //Just check if exists. This should be checked with current date
       this.setLoginStatus(1);
     }else{

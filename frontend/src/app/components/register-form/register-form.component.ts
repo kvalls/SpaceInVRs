@@ -33,7 +33,7 @@ export class RegisterFormComponent implements OnInit {
       console.log('Please provide all the required values!')
       return false;
     } else {
-      console.log(this.ionicForm.value)
+      console.log(this.ionicForm.value);
       let user: User = {
         id: null,
         email: this.ionicForm.value.email,

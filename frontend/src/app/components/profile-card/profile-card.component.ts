@@ -1,3 +1,5 @@
+import { User } from './../../shared/auth/user';
+import { AuthService } from './../../shared/auth/auth.service';
 import { UserService } from './../../shared/services/user.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,16 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileCardComponent implements OnInit {
 
-  user: any = []
+  user: User;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private authService: AuthService) { }
 
   ngOnInit() {
+    this.authService.getUserData().then((data) => {
+      this.user = data;
+      console.log("holaola "+this.user.id+" holaola");
+    });
     // this.userService.getUser(this.user);
   }
 
   ionViewDidEnter() {
-
+    // console.log(this.authService.getUserData());
   }
 
 }

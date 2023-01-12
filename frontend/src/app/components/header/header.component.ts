@@ -15,6 +15,10 @@ export class HeaderComponent implements OnInit {
     this.updateAuthInfo();
   }
 
+  ionViewDidEnter() {
+    this.updateAuthInfo();
+  }
+
   updateAuthInfo(){
     this.authService.isLoggedIn();
   }
