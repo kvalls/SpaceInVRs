@@ -75,9 +75,9 @@ export class AuthService {
     await this.storage.remove("userdata");
   }
 
-  async setUserData(userData){
-    userData = await this.storage.get("userdata");
-  }
+  // async setUserData(userData){
+  //   userData = await this.storage.get("userdata");
+  // }
 
   async getUserData(){
     let userData = await this.storage.get("userdata");
