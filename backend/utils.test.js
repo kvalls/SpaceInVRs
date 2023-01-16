@@ -36,7 +36,7 @@ describe('getCleanUser', () => {
       name: 'John Doe',
       email: 'johndoe@example.com',
       profile_img: 'http://example.com/avatar.png',
-      password: null
+      password: 'password'
     };
     const cleanUser = getCleanUser(user);
     expect(cleanUser).toEqual({
@@ -45,6 +45,24 @@ describe('getCleanUser', () => {
       email: user.email,
       profile_img: user.profile_img,
       password: user.password
+    });
+  });
+
+  test('no matter what it returns the right structure', () => {
+    const user = {
+      id2: 1,
+      name2: 'John Doe',
+      email2: 'johndoe@example.com',
+      profile_img2: 'http://example.com/avatar.png',
+      password2: 'password'
+    };
+    const cleanUser = getCleanUser(user);
+    expect(cleanUser).toEqual({
+      id: undefined,
+      name: undefined,
+      email: undefined,
+      profile_img: undefined,
+      password: undefined
     });
   });
 
