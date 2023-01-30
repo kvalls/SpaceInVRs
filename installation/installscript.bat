@@ -58,7 +58,13 @@ CALL npm i --force
 
 cd ..
 
-SET NLM=^
+echo JWT_SECRET=V3RY#1MP0RT@NT$3CR3T# >> .env
+echo MYSQL_DATABASE=db_spaceinvrs_dev >> .env
+echo MYSQL_USER=root >> .env
+echo MYSQL_PASSWORD=passkris >> .env
+echo MYSQL_ROOT_PASSWORD=passkris >> .env
+echo DB_HOST=localhost >> .env
+echo NODE_ENV=development >> .env
 
 echo Installing backend...
 CALL npm i --force
