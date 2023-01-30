@@ -83,6 +83,7 @@ START npm start
 cd ../frontend
 START ionic serve
 
+cd ../../
 goto :RUN-TESTS
 
 Rem Run backend, frontend & jsreport

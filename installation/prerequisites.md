@@ -18,4 +18,4 @@
 >>>NODE_ENV=development
 
 ## Ready to run
-* [Installation Script](../installscript.bat)
+* [Installation Script](../installation/installscript.bat)
