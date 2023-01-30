@@ -51,16 +51,6 @@ goto :NPM-INSTALL
 Rem npm install
 cd SpaceInVRs/backend
 echo Installing backend...
-CALL echo 'JWT_SECRET=V3RY#1MP0RT@NT$3CR3T#
-
-MYSQL_DATABASE=db_spaceinvrs_dev
-MYSQL_USER=root
-MYSQL_PASSWORD=passkris
-MYSQL_ROOT_PASSWORD=passkris
-
-DB_HOST=localhost
-
-NODE_ENV=development' >> .env
 CALL npm i --force
 CALL npm run dbpush
 
@@ -68,7 +58,9 @@ cd /jsreport
 echo Installing jsreport...
 CALL npm i --force
 
-cd ../../frontend
+cd ..
+cd ..
+cd /frontend
 echo Installing frontend...
 CALL npm i --force
 
@@ -85,7 +77,9 @@ START npm start
 cd /jsreport
 START npm start
 
-cd ../../frontend
+cd ..
+cd ..
+cd /frontend
 START ionic serve
 
 
