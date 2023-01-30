@@ -12,6 +12,11 @@ For example if a user loses too many times, the amount of enemies would be reduc
 
 This project was assigned by Aiju.
 
+## Automated installation
+
+* [Prerequisites](/installation/prerequisites.md)
+* [Installation Script](/installation/installscript.bat)
+
 ## Documentation
 
 * [Planification](/documentation/planification.md)
