@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1673634212097" clover="3.2.0">
-  <project timestamp="1673634212097" name="All files">
+<coverage generated="1675107230356" clover="3.2.0">
+  <project timestamp="1675107230357" name="All files">
     <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2" elements="13" coveredelements="13" complexity="0" loc="7" ncloc="7" packages="1" files="1" classes="1"/>
     <file name="utils.js" path="C:\Users\Kris\Desktop\2DAM\Project\SpaceInVRs\backend\utils.js">
       <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
@@ -8,8 +8,8 @@
       <line num="8" count="2" type="cond" truecount="2" falsecount="0"/>
       <line num="10" count="1" type="stmt"/>
       <line num="19" count="1" type="stmt"/>
-      <line num="26" count="2" type="cond" truecount="2" falsecount="0"/>
-      <line num="28" count="1" type="stmt"/>
+      <line num="26" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="28" count="2" type="stmt"/>
       <line num="37" count="1" type="stmt"/>
     </file>
   </project>

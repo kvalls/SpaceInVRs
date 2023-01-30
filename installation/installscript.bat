@@ -20,7 +20,8 @@ SET /P menu-section=What would you like to do?
 IF %menu-section%==1 goto :FULL-UPDATE
 IF %menu-section%==2 goto :NPM-INSTALL
 IF %menu-section%==3 goto :RUN-PROGRAM
-IF %menu-section%==4 goto :END
+IF %menu-section%==4 goto :RUN-TESTS
+IF %menu-section%==5 goto :END
 
 echo Unknown option, please try again.
 goto :MENU
@@ -58,9 +59,6 @@ cd ..
 
 SET NLM=^
 
-SET NL=^^^%NLM%%NLM%^%NLM%%NLM%
-echo JWT_SECRET=V3RY#1MP0RT@NT$3CR3T#%NL%MYSQL_DATABASE=db_spaceinvrs_dev%NL%MYSQL_USER=root%NL%MYSQL_PASSWORD=passkris%NL%MYSQL_ROOT_PASSWORD=passkris%NL%DB_HOST=localhost%NL%NODE_ENV=development > .env
-
 echo Installing backend...
 CALL npm i --force
 
@@ -71,7 +69,6 @@ CALL npm i --force
 
 cd ../../
 goto :RUN-PROGRAM
-
 
 Rem Run backend, frontend & jsreport
 :RUN-PROGRAM
@@ -85,6 +82,18 @@ START npm start
 
 cd ../frontend
 START ionic serve
+
+goto :RUN-TESTS
+
+Rem Run backend, frontend & jsreport
+:RUN-TESTS
+
+cd SpaceInVRs/backend/
+START npm run test:coverage
+
+
+cd ../frontend
+START npm run test:coverage
 
 
 
