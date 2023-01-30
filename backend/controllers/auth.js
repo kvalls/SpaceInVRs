@@ -21,7 +21,7 @@ exports.signin = (req, res) => {
   User.findOne({ where: { email: user } })
     .then(data => {
       const result = bcrypt.compareSync(pwd, data.password);
-      if(!result) return  res.status(401).send('Password not valid!');
+      if (!result) return res.status(401).send('Password not valid!');
 
       // generate token
       const token = utils.generateToken(data);
@@ -43,6 +43,18 @@ exports.isAuthenticated = (req, res, next) => {
   // check header or url parameters or post parameters for token
   // var token = req.body.token || req.query.token;
   var token = req.token;
+  
+  console.log('pruebas');
+  console.log(token);
+  console.log(req.headers.authorization);
+  jsreportauth = Buffer.from('myUsername:myPassword').toString('base64')
+  console.log('end pruebas');
+
+  if (req.headers.authorization === 'Basic ' + jsreportauth) {
+    next();
+    return;
+  }
+
   if (!token) {
     return res.status(400).json({
       error: true,
@@ -82,4 +94,5 @@ exports.isAuthenticated = (req, res, next) => {
         });
       });
   });
+
 };

@@ -1,3 +1,4 @@
+import { ReportsComponent } from './reports/reports.component';
 import { ProfileCardComponent } from './profile-card/profile-card.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
@@ -17,7 +18,8 @@ const components = [
     FooterComponent,
     RegisterFormComponent,
     LoginFormComponent,
-    ProfileCardComponent
+    ProfileCardComponent,
+    ReportsComponent 
 ]
 
 @NgModule({
