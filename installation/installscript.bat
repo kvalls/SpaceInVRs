@@ -14,7 +14,8 @@ echo Options (Note that after an update is done, everything will start as normal
 echo 1: Full update
 echo 2: npm install
 echo 3: Start the server and the web
-echo 4: Exit
+echo 4: Run tests
+echo 5: Exit
 
 SET /P menu-section=What would you like to do? 
 IF %menu-section%==1 goto :FULL-UPDATE
