@@ -55357,3 +55357,611 @@ Error: Error when evaluating engine handlebars for template /SpaceInVRs/SpaceInV
 2023-01-27T18:38:59.274Z - debug: Running chrome with params {"printBackground":true,"timeout":59865,"margin":{}} rootId=090uzma17wf0g4g, id=090uzma17wf0g4g, fromEmitProfile=true
 2023-01-27T18:38:59.281Z - debug: Skipping storing report. rootId=090uzma17wf0g4g, id=090uzma17wf0g4g, fromEmitProfile=true
 2023-01-27T18:38:59.282Z - info: Rendering request 6 finished in 420 ms rootId=090uzma17wf0g4g, id=090uzma17wf0g4g, fromEmitProfile=true
+2023-02-01T16:24:52.069Z - info: Initializing jsreport (version: 3.10.0, configuration file: jsreport.config.json, nodejs: 16.17.0)
+2023-02-01T16:24:52.072Z - info: Searching for available extensions in C:\Users\Kris\Desktop\2DAM\Project\SpaceInVRs\backend\jsreport\
+2023-02-01T16:24:52.080Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Kris\Desktop\2DAM\Project\SpaceInVRs\backend\jsreport\
+2023-02-01T16:24:52.123Z - info: Found 35 extension(s)
+2023-02-01T16:24:52.171Z - debug: Writing extension locations cache to C:\Users\Kris\AppData\Local\Temp\jsreport\core\locations.json
+2023-02-01T16:24:52.174Z - debug: Discovered 35 extensions
+2023-02-01T16:24:52.223Z - debug: Extension authentication@3.4.0 is disabled, skipping
+2023-02-01T16:24:52.224Z - info: Using extension base@3.0.1
+2023-02-01T16:24:52.230Z - info: Using extension child-templates@3.1.0
+2023-02-01T16:24:52.236Z - info: Using extension cli@3.2.3
+2023-02-01T16:24:52.242Z - info: Using extension components@3.3.0
+2023-02-01T16:24:52.246Z - info: Using extension data@3.1.0
+2023-02-01T16:24:52.248Z - info: Using extension express@3.6.0
+2023-02-01T16:24:52.689Z - info: Using extension freeze@3.0.1
+2023-02-01T16:24:52.692Z - info: Using extension fs-store@3.2.4
+2023-02-01T16:24:52.836Z - info: Using extension handlebars@3.2.1
+2023-02-01T16:24:52.838Z - info: Using extension import-export@3.2.0
+2023-02-01T16:24:52.858Z - info: Using extension jsrender@3.0.0
+2023-02-01T16:24:52.860Z - info: Using extension licensing@3.0.2
+2023-02-01T16:24:52.905Z - info: Using extension localization@3.2.1
+2023-02-01T16:24:52.907Z - info: Using extension npm@3.1.2
+2023-02-01T16:24:52.910Z - info: Using extension pdf-utils@3.7.0
+2023-02-01T16:24:52.913Z - info: Using extension reports@3.1.1
+2023-02-01T16:24:52.917Z - info: Using extension tags@3.1.1
+2023-02-01T16:24:52.921Z - info: Using extension text@3.0.0
+2023-02-01T16:24:52.922Z - info: Using extension version-control@3.1.2
+2023-02-01T16:24:52.941Z - info: Using extension assets@3.6.0
+2023-02-01T16:24:52.958Z - info: Using extension authorization@3.3.0
+2023-02-01T16:24:52.965Z - debug: Extension authorization@3.3.0 was disabled
+2023-02-01T16:24:52.965Z - info: Using extension browser-client@3.1.1
+2023-02-01T16:24:52.969Z - info: Using extension chrome-pdf@3.3.0
+2023-02-01T16:24:52.973Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2023-02-01T16:24:52.973Z - info: Using extension docx@3.6.0
+2023-02-01T16:24:52.977Z - info: Using extension html-to-xlsx@3.3.0
+2023-02-01T16:24:53.119Z - info: html-to-xlsx detected chrome as available html engine
+2023-02-01T16:24:53.120Z - info: Using extension pptx@3.4.0
+2023-02-01T16:24:53.123Z - info: Using extension scheduling@3.0.3
+2023-02-01T16:24:53.168Z - info: Using extension scripts@3.4.0
+2023-02-01T16:24:53.169Z - info: Using extension static-pdf@3.0.1
+2023-02-01T16:24:53.171Z - info: Using extension studio@3.9.0
+2023-02-01T16:24:53.354Z - info: Using extension xlsx@3.4.0
+2023-02-01T16:24:53.395Z - info: Using extension public-templates@3.0.0
+2023-02-01T16:24:53.397Z - debug: Extension public-templates@3.0.0 was disabled
+2023-02-01T16:24:53.398Z - info: Using extension sample-template@3.2.1
+2023-02-01T16:24:53.402Z - info: Using extension studio-theme-dark@3.0.1
+2023-02-01T16:24:53.405Z - info: Code sandboxing is disabled, users can potentially penetrate the local system if you allow code from external users to be part of your reports
+2023-02-01T16:24:53.406Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2023-02-01T16:24:53.406Z - info: Using fs provider for template store.
+2023-02-01T16:24:53.418Z - info: fs store is persisting using fs for C:\Users\Kris\Desktop\2DAM\Project\SpaceInVRs\backend\jsreport\data
+2023-02-01T16:24:53.431Z - info: fs store is loading data
+2023-02-01T16:24:53.465Z - info: fs store is initialized successfully
+2023-02-01T16:24:53.472Z - debug: studio default theme is: light
+2023-02-01T16:24:53.493Z - info: Creating default express app.
+2023-02-01T16:24:53.547Z - info: jsreport server successfully started on http port: 5488
+2023-02-01T16:24:53.550Z - info: Verifying license key free
+2023-02-01T16:24:53.551Z - info: Using free license
+2023-02-01T16:24:53.556Z - info: Initializing worker threads
+2023-02-01T16:24:53.557Z - debug: Extensions in workers: base, child-templates, components, data, express, handlebars, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, chrome-pdf, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx
+2023-02-01T16:24:53.936Z - info: 2 worker threads initialized in 380ms
+2023-02-01T16:24:53.936Z - info: Starting temp files cleanup with 180000ms threshold
+2023-02-01T16:24:53.938Z - info: reporter initialized
+2023-02-01T16:25:05.296Z - debug: OData query on templates
+2023-02-01T16:25:05.302Z - debug: OData query on folders
+2023-02-01T16:25:05.306Z - debug: OData query on components
+2023-02-01T16:25:05.309Z - debug: OData query on data
+2023-02-01T16:25:05.312Z - debug: OData query on tags
+2023-02-01T16:25:05.315Z - debug: OData query on assets
+2023-02-01T16:25:05.319Z - debug: OData query on scripts
+2023-02-01T16:25:05.323Z - debug: OData query on schedules
+2023-02-01T16:25:05.332Z - debug: OData query on settings
+2023-02-01T16:25:05.410Z - debug: OData query on templates
+2023-02-01T16:25:05.436Z - debug: OData query on profiles
+2023-02-01T16:25:05.451Z - debug: OData query on profiles
+2023-02-01T16:25:05.472Z - debug: OData query on profiles
+2023-02-01T16:25:05.478Z - debug: OData query on profiles
+2023-02-01T16:25:05.484Z - debug: OData query on profiles
+2023-02-01T16:25:05.491Z - debug: OData query on profiles
+2023-02-01T16:25:05.498Z - debug: OData query on templates
+2023-02-01T16:25:08.198Z - debug: OData query on data
+2023-02-01T16:25:10.395Z - debug: OData query on templates
+2023-02-01T16:25:11.476Z - debug: OData query on scripts
+2023-02-01T16:25:53.477Z - warn: Cleaning fs journal failed, will reload Unexpected end of JSON input stack=SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\Kris\Desktop\2DAM\Project\SpaceInVRs\backend\jsreport\node_modules\@jsreport\jsreport-fs-store\lib\customUtils.js:83:15)
+    at Object.clean (C:\Users\Kris\Desktop\2DAM\Project\SpaceInVRs\backend\jsreport\node_modules\@jsreport\jsreport-fs-store\lib\journal.js:185:24)
+    at async lock (C:\Users\Kris\Desktop\2DAM\Project\SpaceInVRs\backend\jsreport\node_modules\@jsreport\jsreport-fs-store\lib\customUtils.js:163:12)
+2023-02-01T16:47:39.574Z - info: Render request 1 queued for execution and waiting for available worker fromEmitProfile=true, rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l
+2023-02-01T16:47:39.620Z - info: Starting rendering request 1 rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:39.620Z - info: Rendering template { name: SpaceInVRs-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:39.621Z - debug: Inline data specified. rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:39.621Z - debug: Executing script SpaceInVRs-mainscript (beforeRender) rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:40.084Z - debug: [36m(console:log) AAAAAAAAAAAAAAAAAAAAAAA  {[39m
+[36m  template: {[39m
+[36m    name: 'SpaceInVRs-main',[39m
+[36m    engine: 'handlebars',[39m
+[36m    recipe: 'chrome-pdf',[39m
+[36m    data: { shortid: '44EIOSaAC' },[39m
+[36m    shortid: 'g-UQf7YbRO',[39m
+[36m    chrome: { printBackground: true },[39m
+[36m    creationDate: 2023-01-27T11:57:19.858Z,[39m
+[36m    modificationDate: 2023-01-27T18:18:16.818Z,[39m
+[36m    _id: 'QsaSlXETlAiprs-C',[39m
+[36m    scripts: [ [Object] ],[39m
+[36m    content: '<!DOCTYPE html>\r\n' +[39m
+[36m      '<html>\r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '<head>\r\n' +[39m
+[36m      '    <title>User Report</title>\r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.css">\r\n' +[39m
+[36m      '    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.js"></script>\r\n' +[39m
+[36m      '    <script src="https://unpkg.com/chartist-plugin-tooltips@0.0.17"></script>\r\n' +[39m
+[36m      '    <script src="https://unpkg.com/chartist-plugin-pointlabels@0.0.6"></script>\r\n' +[39m
+[36m      '    <style>\r\n' +[39m
+[36m      '        .session {\r\n' +[39m
+[36m      '            width: 450px;\r\n' +[39m
+[36m      '            /* adjust this as needed to make the charts smaller */\r\n' +[39m
+[36m      '            height: 400px;\r\n' +[39m
+[36m      '            /* adjust this as needed to make the charts smaller */\r\n' +[39m
+[36m      '            margin: 5px auto;\r\n' +[39m
+[36m      '            /* center the charts horizontally and add some vertical margin */\r\n' +[39m
+[36m      '            page-break-inside: avoid;\r\n' +[39m
+[36m      '            /* prevent a session from overlapping two pages of the PDF */\r\n' +[39m
+[36m      '            padding-top: 5%;\r\n' +[39m
+[36m      '        }\r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '        .ct-label {\r\n' +[39m
+[36m      '            font-size: 12px;\r\n' +[39m
+[36m      '            /* adjust this as needed to change the font size of the labels */\r\n' +[39m
+[36m      '            fill: #000;\r\n' +[39m
+[36m      '            /* adjust this as needed to change the color of the labels */\r\n' +[39m
+[36m      '        }\r\n' +[39m
+[36m      '        \r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '        .ct-bar {\r\n' +[39m
+[36m      '            stroke-width: 25px;\r\n' +[39m
+[36m      '            /* adjust this as needed to change the width of the bars */\r\n' +[39m
+[36m      '        }\r\n' +[39m
+[36m      '    </style>\r\n' +[39m
+[36m      '</head>\r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '<body>\r\n' +[39m
+[36m      '    <h1>{{user.name}}All Sessions Report</h1>\r\n' +[39m
+[36m      '    {{#each sessions}}\r\n' +[39m
+[36m      '    <div class="session">\r\n' +[39m
+[36m      '        <h2>Session {{@index}} User {{user_id}}</h2> \r\n' +[39m
+[36m      '        \r\n' +[39m
+[36m      '        <p>Final Score = {{finalscore}}</p>\r\n' +[39m
+[36m      '        <div class="ct-chart ct-perfect-fourth" id="session-{{@index}}"></div>\r\n' +[39m
+[36m      '        <script>\r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '      var data = {\r\n' +[39m
+[36m      "        labels: ['Score', 'Ships Destroyed', 'Bullets Fired', 'Powerups'],\r\n" +[39m
+[36m      '        series: [[{{score}}, {{ships_destroyed}}, {{bullets_fired}}, {{powerups}}]]\r\n' +[39m
+[36m      '      };\r\n' +[39m
+[36m      '      \r\n' +[39m
+[36m      '      var options = {\r\n' +[39m
+[36m      '        axisX: {\r\n' +[39m
+[36m      '          showLabel: true,\r\n' +[39m
+[36m      '          showGrid: false\r\n' +[39m
+[36m      '        },\r\n' +[39m
+[36m      '        axisY: {\r\n' +[39m
+[36m      '          showLabel: true,\r\n' +[39m
+[36m      '          showGrid: true,\r\n' +[39m
+[36m      '          offset: 60\r\n' +[39m
+[36m      '        },\r\n' +[39m
+[36m      '        plugins: [\r\n' +[39m
+[36m      '          Chartist.plugins.tooltip({\r\n' +[39m
+[36m      '            appendToBody: true,\r\n' +[39m
+[36m      '            transformTooltipTextFnc: function(value) {\r\n' +[39m
+[36m      '              return value;\r\n' +[39m
+[36m      '            }\r\n' +[39m
+[36m      '          }),\r\n' +[39m
+[36m      '          Chartist.plugins.ctPointLabels({\r\n' +[39m
+[36m      '            labelInterpolationFnc: function(value) {\r\n' +[39m
+[36m      '              return value ;\r\n' +[39m
+[36m      '            },\r\n' +[39m
+[36m      "            labelPosition: 'top',\r\n" +[39m
+[36m      "            textAnchor: 'middle', //get it horizontal-wise middle of the bar\r\n" +[39m
+[36m      '            labelOffset:{x:0,y:30} //adding a little offset to get some space\r\n' +[39m
+[36m      '          })\r\n' +[39m
+[36m      '        ]\r\n' +[39m
+[36m      '      };\r\n' +[39m
+[36m      '      \r\n' +[39m
+[36m      "      new Chartist.Bar('#session-{{@index}}', data, options);\r\n" +[39m
+[36m      '    </script> {{/each}}\r\n' +[39m
+[36m      '    </div>\r\n' +[39m
+[36m      '</body>\r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '</html>',[39m
+[36m    helpers: '',[39m
+[36m    folder: { shortid: '_HhHT5P' }[39m
+[36m  },[39m
+[36m  options: { preview: true },[39m
+[36m  context: [Getter/Setter],[39m
+[36m  data: {},[39m
+[36m  cancel: [Function (anonymous)][39m
+[36m}[39m userLevel=true, rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:40.224Z - debug: [36m(console:log) 150[39m userLevel=true, rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:40.224Z - debug: [36m(console:log) Aquí el score: undefined[39m userLevel=true, rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:40.226Z - debug: [36m(console:log) Aquí las naves destruidas: undefined[39m userLevel=true, rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:40.226Z - debug: Base url not specified, skipping its injection. rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:40.227Z - debug: Rendering engine handlebars rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:40.623Z - debug: Executing recipe chrome-pdf rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:41.057Z - debug: Converting with chrome HeadlessChrome/105.0.5173.0 using chrome-pool strategy rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:41.590Z - debug: Page request: GET (document) file:///C:/Users/Kris/AppData/Local/Temp/jsreport/autocleanup/99f88af9-6ae5-4294-94bb-5f73888fb20b-chrome-pdf.html rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:41.692Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Kris/AppData/Local/Temp/jsreport/autocleanup/99f88af9-6ae5-4294-94bb-5f73888fb20b-chrome-pdf.html rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:41.693Z - debug: Page request: GET (stylesheet) https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.css rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:41.694Z - debug: Page request: GET (script) https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.js rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:41.694Z - debug: Page request: GET (script) https://unpkg.com/chartist-plugin-tooltips@0.0.17 rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:41.696Z - debug: Page request: GET (script) https://unpkg.com/chartist-plugin-pointlabels@0.0.6 rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:44.518Z - debug: Page request finished: GET (stylesheet) 200 https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.css rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:44.519Z - debug: Page request finished: GET (script) 200 https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.js rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:44.519Z - warn: Page request failed: GET (script) 302 https://unpkg.com/chartist-plugin-pointlabels@0.0.6 (redirect to: /chartist-plugin-pointlabels@0.0.6/dist/chartist-plugin-pointlabels.js) rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:44.520Z - debug: Page request: GET (script) https://unpkg.com/chartist-plugin-pointlabels@0.0.6/dist/chartist-plugin-pointlabels.js (redirect from: https://unpkg.com/chartist-plugin-pointlabels@0.0.6) rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:44.521Z - warn: Page request failed: GET (script) 302 https://unpkg.com/chartist-plugin-tooltips@0.0.17 (redirect to: /chartist-plugin-tooltips@0.0.17/dist/chartist-plugin-tooltip.js) rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:44.522Z - debug: Page request: GET (script) https://unpkg.com/chartist-plugin-tooltips@0.0.17/dist/chartist-plugin-tooltip.js (redirect from: https://unpkg.com/chartist-plugin-tooltips@0.0.17) rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:44.618Z - debug: Page request finished: GET (script) 200 https://unpkg.com/chartist-plugin-tooltips@0.0.17/dist/chartist-plugin-tooltip.js rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:44.619Z - debug: Page request finished: GET (script) 200 https://unpkg.com/chartist-plugin-pointlabels@0.0.6/dist/chartist-plugin-pointlabels.js rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:44.619Z - debug: Running chrome with params {"printBackground":true,"timeout":58943,"margin":{}} rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:44.725Z - debug: Skipping storing report. rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-01T16:47:44.726Z - info: Rendering request 1 finished in 5154 ms rootId=u3vs6j4opg3vy6l, id=u3vs6j4opg3vy6l, fromEmitProfile=true
+2023-02-02T14:58:03.089Z - debug: fs journal was not synced for a while, need full reload
+2023-02-02T14:58:03.099Z - info: fs store is loading data
+2023-02-06T19:42:47.852Z - info: Initializing jsreport (version: 3.10.0, configuration file: jsreport.config.json, nodejs: 16.17.0)
+2023-02-06T19:42:47.855Z - info: Searching for available extensions in C:\Users\Kris\Desktop\2DAM\Project\SpaceInVRs\backend\jsreport\
+2023-02-06T19:42:47.866Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Kris\Desktop\2DAM\Project\SpaceInVRs\backend\jsreport\
+2023-02-06T19:42:47.908Z - info: Found 35 extension(s)
+2023-02-06T19:42:47.960Z - debug: Writing extension locations cache to C:\Users\Kris\AppData\Local\Temp\jsreport\core\locations.json
+2023-02-06T19:42:47.961Z - debug: Discovered 35 extensions
+2023-02-06T19:42:48.014Z - debug: Extension authentication@3.4.0 is disabled, skipping
+2023-02-06T19:42:48.015Z - info: Using extension base@3.0.1
+2023-02-06T19:42:48.022Z - info: Using extension child-templates@3.1.0
+2023-02-06T19:42:48.028Z - info: Using extension cli@3.2.3
+2023-02-06T19:42:48.034Z - info: Using extension components@3.3.0
+2023-02-06T19:42:48.037Z - info: Using extension data@3.1.0
+2023-02-06T19:42:48.040Z - info: Using extension express@3.6.0
+2023-02-06T19:42:48.568Z - info: Using extension freeze@3.0.1
+2023-02-06T19:42:48.572Z - info: Using extension fs-store@3.2.4
+2023-02-06T19:42:48.740Z - info: Using extension handlebars@3.2.1
+2023-02-06T19:42:48.744Z - info: Using extension import-export@3.2.0
+2023-02-06T19:42:48.764Z - info: Using extension jsrender@3.0.0
+2023-02-06T19:42:48.766Z - info: Using extension licensing@3.0.2
+2023-02-06T19:42:48.816Z - info: Using extension localization@3.2.1
+2023-02-06T19:42:48.818Z - info: Using extension npm@3.1.2
+2023-02-06T19:42:48.823Z - info: Using extension pdf-utils@3.7.0
+2023-02-06T19:42:48.826Z - info: Using extension reports@3.1.1
+2023-02-06T19:42:48.831Z - info: Using extension tags@3.1.1
+2023-02-06T19:42:48.836Z - info: Using extension text@3.0.0
+2023-02-06T19:42:48.837Z - info: Using extension version-control@3.1.2
+2023-02-06T19:42:48.869Z - info: Using extension assets@3.6.0
+2023-02-06T19:42:48.891Z - info: Using extension authorization@3.3.0
+2023-02-06T19:42:48.900Z - debug: Extension authorization@3.3.0 was disabled
+2023-02-06T19:42:48.900Z - info: Using extension browser-client@3.1.1
+2023-02-06T19:42:48.907Z - info: Using extension chrome-pdf@3.3.0
+2023-02-06T19:42:48.912Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2023-02-06T19:42:48.913Z - info: Using extension docx@3.6.0
+2023-02-06T19:42:48.919Z - info: Using extension html-to-xlsx@3.3.0
+2023-02-06T19:42:49.102Z - info: html-to-xlsx detected chrome as available html engine
+2023-02-06T19:42:49.103Z - info: Using extension pptx@3.4.0
+2023-02-06T19:42:49.107Z - info: Using extension scheduling@3.0.3
+2023-02-06T19:42:49.154Z - info: Using extension scripts@3.4.0
+2023-02-06T19:42:49.156Z - info: Using extension static-pdf@3.0.1
+2023-02-06T19:42:49.158Z - info: Using extension studio@3.9.0
+2023-02-06T19:42:49.343Z - info: Using extension xlsx@3.4.0
+2023-02-06T19:42:49.388Z - info: Using extension public-templates@3.0.0
+2023-02-06T19:42:49.390Z - debug: Extension public-templates@3.0.0 was disabled
+2023-02-06T19:42:49.391Z - info: Using extension sample-template@3.2.1
+2023-02-06T19:42:49.394Z - info: Using extension studio-theme-dark@3.0.1
+2023-02-06T19:42:49.397Z - info: Code sandboxing is disabled, users can potentially penetrate the local system if you allow code from external users to be part of your reports
+2023-02-06T19:42:49.397Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2023-02-06T19:42:49.398Z - info: Using fs provider for template store.
+2023-02-06T19:42:49.406Z - info: fs store is persisting using fs for C:\Users\Kris\Desktop\2DAM\Project\SpaceInVRs\backend\jsreport\data
+2023-02-06T19:42:49.415Z - info: fs store is loading data
+2023-02-06T19:42:49.451Z - info: fs store is initialized successfully
+2023-02-06T19:42:49.458Z - debug: studio default theme is: light
+2023-02-06T19:42:49.469Z - info: Creating default express app.
+2023-02-06T19:42:49.509Z - info: jsreport server successfully started on http port: 5488
+2023-02-06T19:42:49.510Z - info: Verifying license key free
+2023-02-06T19:42:49.511Z - info: Using free license
+2023-02-06T19:42:49.515Z - info: Initializing worker threads
+2023-02-06T19:42:49.516Z - debug: Extensions in workers: base, child-templates, components, data, express, handlebars, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, chrome-pdf, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx
+2023-02-06T19:42:49.875Z - info: 2 worker threads initialized in 360ms
+2023-02-06T19:42:49.876Z - info: Starting temp files cleanup with 180000ms threshold
+2023-02-06T19:42:49.877Z - info: reporter initialized
+2023-02-06T19:43:27.296Z - debug: OData query on templates
+2023-02-06T19:43:27.303Z - debug: OData query on folders
+2023-02-06T19:43:27.307Z - debug: OData query on components
+2023-02-06T19:43:27.310Z - debug: OData query on data
+2023-02-06T19:43:27.312Z - debug: OData query on tags
+2023-02-06T19:43:27.316Z - debug: OData query on assets
+2023-02-06T19:43:27.322Z - debug: OData query on scripts
+2023-02-06T19:43:27.326Z - debug: OData query on schedules
+2023-02-06T19:43:27.336Z - debug: OData query on settings
+2023-02-06T19:43:27.437Z - debug: OData query on templates
+2023-02-06T19:43:27.473Z - debug: OData query on profiles
+2023-02-06T19:43:27.494Z - debug: OData query on profiles
+2023-02-06T19:43:27.510Z - debug: OData query on profiles
+2023-02-06T19:43:27.523Z - debug: OData query on profiles
+2023-02-06T19:43:27.530Z - debug: OData query on profiles
+2023-02-06T19:43:27.536Z - debug: OData query on profiles
+2023-02-06T19:43:27.541Z - debug: OData query on templates
+2023-02-06T19:44:03.786Z - debug: OData query on templates
+2023-02-06T19:44:07.960Z - debug: OData query on scripts
+2023-02-06T19:45:09.590Z - debug: OData update on scripts
+2023-02-06T19:45:09.628Z - debug: OData query on scripts
+2023-02-06T19:51:52.618Z - debug: OData update on scripts
+2023-02-06T19:51:52.649Z - debug: OData query on scripts
+2023-02-06T20:08:22.918Z - info: Render request 1 queued for execution and waiting for available worker fromEmitProfile=true, rootId=hl0trlv36awzujl, id=hl0trlv36awzujl
+2023-02-06T20:08:22.974Z - info: Starting rendering request 1 rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:22.974Z - info: Rendering template { name: SpaceInVRs-main, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:22.975Z - debug: Adding sample data 44EIOSaAC rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:22.976Z - debug: Executing script SpaceInVRs-mainscript (beforeRender) rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:23.534Z - debug: [36m(console:log) AAAAAAAAAAAAAAAAAAAAAAA  {[39m
+[36m  template: {[39m
+[36m    name: 'SpaceInVRs-main',[39m
+[36m    engine: 'handlebars',[39m
+[36m    recipe: 'chrome-pdf',[39m
+[36m    data: { shortid: '44EIOSaAC' },[39m
+[36m    shortid: 'g-UQf7YbRO',[39m
+[36m    chrome: { printBackground: true },[39m
+[36m    creationDate: 2023-01-27T11:57:19.858Z,[39m
+[36m    modificationDate: 2023-01-27T18:18:16.818Z,[39m
+[36m    _id: 'QsaSlXETlAiprs-C',[39m
+[36m    scripts: [ [Object] ],[39m
+[36m    content: '<!DOCTYPE html>\r\n' +[39m
+[36m      '<html>\r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '<head>\r\n' +[39m
+[36m      '    <title>User Report</title>\r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.css">\r\n' +[39m
+[36m      '    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.js"></script>\r\n' +[39m
+[36m      '    <script src="https://unpkg.com/chartist-plugin-tooltips@0.0.17"></script>\r\n' +[39m
+[36m      '    <script src="https://unpkg.com/chartist-plugin-pointlabels@0.0.6"></script>\r\n' +[39m
+[36m      '    <style>\r\n' +[39m
+[36m      '        .session {\r\n' +[39m
+[36m      '            width: 450px;\r\n' +[39m
+[36m      '            /* adjust this as needed to make the charts smaller */\r\n' +[39m
+[36m      '            height: 400px;\r\n' +[39m
+[36m      '            /* adjust this as needed to make the charts smaller */\r\n' +[39m
+[36m      '            margin: 5px auto;\r\n' +[39m
+[36m      '            /* center the charts horizontally and add some vertical margin */\r\n' +[39m
+[36m      '            page-break-inside: avoid;\r\n' +[39m
+[36m      '            /* prevent a session from overlapping two pages of the PDF */\r\n' +[39m
+[36m      '            padding-top: 5%;\r\n' +[39m
+[36m      '        }\r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '        .ct-label {\r\n' +[39m
+[36m      '            font-size: 12px;\r\n' +[39m
+[36m      '            /* adjust this as needed to change the font size of the labels */\r\n' +[39m
+[36m      '            fill: #000;\r\n' +[39m
+[36m      '            /* adjust this as needed to change the color of the labels */\r\n' +[39m
+[36m      '        }\r\n' +[39m
+[36m      '        \r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '        .ct-bar {\r\n' +[39m
+[36m      '            stroke-width: 25px;\r\n' +[39m
+[36m      '            /* adjust this as needed to change the width of the bars */\r\n' +[39m
+[36m      '        }\r\n' +[39m
+[36m      '    </style>\r\n' +[39m
+[36m      '</head>\r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '<body>\r\n' +[39m
+[36m      '    <h1>{{user.name}}All Sessions Report</h1>\r\n' +[39m
+[36m      '    {{#each sessions}}\r\n' +[39m
+[36m      '    <div class="session">\r\n' +[39m
+[36m      '        <h2>Session {{@index}} User {{user_id}}</h2> \r\n' +[39m
+[36m      '        \r\n' +[39m
+[36m      '        <p>Final Score = {{finalscore}}</p>\r\n' +[39m
+[36m      '        <div class="ct-chart ct-perfect-fourth" id="session-{{@index}}"></div>\r\n' +[39m
+[36m      '        <script>\r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '      var data = {\r\n' +[39m
+[36m      "        labels: ['Score', 'Ships Destroyed', 'Bullets Fired', 'Powerups'],\r\n" +[39m
+[36m      '        series: [[{{score}}, {{ships_destroyed}}, {{bullets_fired}}, {{powerups}}]]\r\n' +[39m
+[36m      '      };\r\n' +[39m
+[36m      '      \r\n' +[39m
+[36m      '      var options = {\r\n' +[39m
+[36m      '        axisX: {\r\n' +[39m
+[36m      '          showLabel: true,\r\n' +[39m
+[36m      '          showGrid: false\r\n' +[39m
+[36m      '        },\r\n' +[39m
+[36m      '        axisY: {\r\n' +[39m
+[36m      '          showLabel: true,\r\n' +[39m
+[36m      '          showGrid: true,\r\n' +[39m
+[36m      '          offset: 60\r\n' +[39m
+[36m      '        },\r\n' +[39m
+[36m      '        plugins: [\r\n' +[39m
+[36m      '          Chartist.plugins.tooltip({\r\n' +[39m
+[36m      '            appendToBody: true,\r\n' +[39m
+[36m      '            transformTooltipTextFnc: function(value) {\r\n' +[39m
+[36m      '              return value;\r\n' +[39m
+[36m      '            }\r\n' +[39m
+[36m      '          }),\r\n' +[39m
+[36m      '          Chartist.plugins.ctPointLabels({\r\n' +[39m
+[36m      '            labelInterpolationFnc: function(value) {\r\n' +[39m
+[36m      '              return value ;\r\n' +[39m
+[36m      '            },\r\n' +[39m
+[36m      "            labelPosition: 'top',\r\n" +[39m
+[36m      "            textAnchor: 'middle', //get it horizontal-wise middle of the bar\r\n" +[39m
+[36m      '            labelOffset:{x:0,y:30} //adding a little offset to get some space\r\n' +[39m
+[36m      '          })\r\n' +[39m
+[36m      '        ]\r\n' +[39m
+[36m      '      };\r\n' +[39m
+[36m      '      \r\n' +[39m
+[36m      "      new Chartist.Bar('#session-{{@index}}', data, options);\r\n" +[39m
+[36m      '    </script> {{/each}}\r\n' +[39m
+[36m      '    </div>\r\n' +[39m
+[36m      '</body>\r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '</html>',[39m
+[36m    helpers: '',[39m
+[36m    folder: { shortid: '_HhHT5P' }[39m
+[36m  },[39m
+[36m  options: {},[39m
+[36m  context: [Getter/Setter],[39m
+[36m  data: {},[39m
+[36m  cancel: [Function (anonymous)][39m
+[36m}[39m userLevel=true, rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:23.672Z - debug: [36m(console:log) 150[39m userLevel=true, rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:23.672Z - debug: [36m(console:log) Aquí el score: undefined[39m userLevel=true, rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:23.673Z - debug: [36m(console:log) Aquí las naves destruidas: undefined[39m userLevel=true, rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:23.673Z - debug: Base url not specified, skipping its injection. rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:23.673Z - debug: Rendering engine handlebars rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:24.116Z - debug: Executing recipe chrome-pdf rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:24.539Z - debug: Converting with chrome HeadlessChrome/105.0.5173.0 using chrome-pool strategy rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:25.072Z - debug: Page request: GET (document) file:///C:/Users/Kris/AppData/Local/Temp/jsreport/autocleanup/c6e85378-47c5-46cd-8602-ec9fa4bc88cb-chrome-pdf.html rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:25.173Z - debug: Page request: GET (stylesheet) https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.css rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:25.174Z - debug: Page request: GET (script) https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.js rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:25.174Z - debug: Page request: GET (script) https://unpkg.com/chartist-plugin-tooltips@0.0.17 rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:25.174Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Kris/AppData/Local/Temp/jsreport/autocleanup/c6e85378-47c5-46cd-8602-ec9fa4bc88cb-chrome-pdf.html rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:25.175Z - debug: Page request: GET (script) https://unpkg.com/chartist-plugin-pointlabels@0.0.6 rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:28.084Z - debug: Page request finished: GET (stylesheet) 200 https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.css rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:28.085Z - debug: Page request finished: GET (script) 200 https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.js rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:28.301Z - warn: Page request failed: GET (script) 302 https://unpkg.com/chartist-plugin-tooltips@0.0.17 (redirect to: /chartist-plugin-tooltips@0.0.17/dist/chartist-plugin-tooltip.js) rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:28.302Z - debug: Page request: GET (script) https://unpkg.com/chartist-plugin-tooltips@0.0.17/dist/chartist-plugin-tooltip.js (redirect from: https://unpkg.com/chartist-plugin-tooltips@0.0.17) rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:28.302Z - debug: Page request finished: GET (script) 200 https://unpkg.com/chartist-plugin-tooltips@0.0.17/dist/chartist-plugin-tooltip.js rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:29.374Z - warn: Page request failed: GET (script) 302 https://unpkg.com/chartist-plugin-pointlabels@0.0.6 (redirect to: /chartist-plugin-pointlabels@0.0.6/dist/chartist-plugin-pointlabels.js) rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:29.374Z - debug: Page request: GET (script) https://unpkg.com/chartist-plugin-pointlabels@0.0.6/dist/chartist-plugin-pointlabels.js (redirect from: https://unpkg.com/chartist-plugin-pointlabels@0.0.6) rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:29.477Z - debug: Page request finished: GET (script) 200 https://unpkg.com/chartist-plugin-pointlabels@0.0.6/dist/chartist-plugin-pointlabels.js rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:29.578Z - debug: Running chrome with params {"printBackground":true,"timeout":58796,"margin":{}} rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:29.589Z - debug: Skipping storing report. rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:08:29.589Z - info: Rendering request 1 finished in 6673 ms rootId=hl0trlv36awzujl, id=hl0trlv36awzujl, fromEmitProfile=true
+2023-02-06T20:49:35.680Z - debug: fs journal was not synced for a while, need full reload
+2023-02-06T20:49:35.682Z - info: fs store is loading data
+2023-02-07T14:59:20.920Z - debug: fs journal was not synced for a while, need full reload
+2023-02-07T14:59:20.927Z - info: fs store is loading data
+2023-02-07T16:41:32.636Z - debug: OData query on templates
+2023-02-07T16:41:32.645Z - debug: OData query on folders
+2023-02-07T16:41:32.650Z - debug: OData query on components
+2023-02-07T16:41:32.653Z - debug: OData query on data
+2023-02-07T16:41:32.657Z - debug: OData query on tags
+2023-02-07T16:41:32.660Z - debug: OData query on assets
+2023-02-07T16:41:32.666Z - debug: OData query on scripts
+2023-02-07T16:41:32.682Z - debug: OData query on schedules
+2023-02-07T16:41:32.699Z - debug: OData query on settings
+2023-02-07T16:41:32.796Z - debug: OData query on templates
+2023-02-07T16:41:33.311Z - info: Render request 2 queued for execution and waiting for available worker fromEmitProfile=true, rootId=xq7rb1sgta1t96r, id=xq7rb1sgta1t96r
+2023-02-07T16:41:33.365Z - info: Starting rendering request 2 rootId=xq7rb1sgta1t96r, id=xq7rb1sgta1t96r, fromEmitProfile=true
+2023-02-07T16:41:33.365Z - info: Rendering template { name: SpaceInVRs-main, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=xq7rb1sgta1t96r, id=xq7rb1sgta1t96r, fromEmitProfile=true
+2023-02-07T16:41:33.406Z - debug: Adding sample data 44EIOSaAC rootId=xq7rb1sgta1t96r, id=xq7rb1sgta1t96r, fromEmitProfile=true
+2023-02-07T16:41:33.410Z - debug: Executing script SpaceInVRs-mainscript (beforeRender) rootId=xq7rb1sgta1t96r, id=xq7rb1sgta1t96r, fromEmitProfile=true
+2023-02-07T16:41:33.654Z - debug: [36m(console:log) AAAAAAAAAAAAAAAAAAAAAAA  {[39m
+[36m  template: {[39m
+[36m    name: 'SpaceInVRs-main',[39m
+[36m    engine: 'handlebars',[39m
+[36m    recipe: 'chrome-pdf',[39m
+[36m    data: { shortid: '44EIOSaAC' },[39m
+[36m    shortid: 'g-UQf7YbRO',[39m
+[36m    chrome: { printBackground: true },[39m
+[36m    creationDate: 2023-01-27T11:57:19.858Z,[39m
+[36m    modificationDate: 2023-01-27T18:18:16.818Z,[39m
+[36m    _id: 'QsaSlXETlAiprs-C',[39m
+[36m    scripts: [ [Object] ],[39m
+[36m    content: '<!DOCTYPE html>\r\n' +[39m
+[36m      '<html>\r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '<head>\r\n' +[39m
+[36m      '    <title>User Report</title>\r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.css">\r\n' +[39m
+[36m      '    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.js"></script>\r\n' +[39m
+[36m      '    <script src="https://unpkg.com/chartist-plugin-tooltips@0.0.17"></script>\r\n' +[39m
+[36m      '    <script src="https://unpkg.com/chartist-plugin-pointlabels@0.0.6"></script>\r\n' +[39m
+[36m      '    <style>\r\n' +[39m
+[36m      '        .session {\r\n' +[39m
+[36m      '            width: 450px;\r\n' +[39m
+[36m      '            /* adjust this as needed to make the charts smaller */\r\n' +[39m
+[36m      '            height: 400px;\r\n' +[39m
+[36m      '            /* adjust this as needed to make the charts smaller */\r\n' +[39m
+[36m      '            margin: 5px auto;\r\n' +[39m
+[36m      '            /* center the charts horizontally and add some vertical margin */\r\n' +[39m
+[36m      '            page-break-inside: avoid;\r\n' +[39m
+[36m      '            /* prevent a session from overlapping two pages of the PDF */\r\n' +[39m
+[36m      '            padding-top: 5%;\r\n' +[39m
+[36m      '        }\r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '        .ct-label {\r\n' +[39m
+[36m      '            font-size: 12px;\r\n' +[39m
+[36m      '            /* adjust this as needed to change the font size of the labels */\r\n' +[39m
+[36m      '            fill: #000;\r\n' +[39m
+[36m      '            /* adjust this as needed to change the color of the labels */\r\n' +[39m
+[36m      '        }\r\n' +[39m
+[36m      '        \r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '        .ct-bar {\r\n' +[39m
+[36m      '            stroke-width: 25px;\r\n' +[39m
+[36m      '            /* adjust this as needed to change the width of the bars */\r\n' +[39m
+[36m      '        }\r\n' +[39m
+[36m      '    </style>\r\n' +[39m
+[36m      '</head>\r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '<body>\r\n' +[39m
+[36m      '    <h1>{{user.name}}All Sessions Report</h1>\r\n' +[39m
+[36m      '    {{#each sessions}}\r\n' +[39m
+[36m      '    <div class="session">\r\n' +[39m
+[36m      '        <h2>Session {{@index}} User {{user_id}}</h2> \r\n' +[39m
+[36m      '        \r\n' +[39m
+[36m      '        <p>Final Score = {{finalscore}}</p>\r\n' +[39m
+[36m      '        <div class="ct-chart ct-perfect-fourth" id="session-{{@index}}"></div>\r\n' +[39m
+[36m      '        <script>\r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '      var data = {\r\n' +[39m
+[36m      "        labels: ['Score', 'Ships Destroyed', 'Bullets Fired', 'Powerups'],\r\n" +[39m
+[36m      '        series: [[{{score}}, {{ships_destroyed}}, {{bullets_fired}}, {{powerups}}]]\r\n' +[39m
+[36m      '      };\r\n' +[39m
+[36m      '      \r\n' +[39m
+[36m      '      var options = {\r\n' +[39m
+[36m      '        axisX: {\r\n' +[39m
+[36m      '          showLabel: true,\r\n' +[39m
+[36m      '          showGrid: false\r\n' +[39m
+[36m      '        },\r\n' +[39m
+[36m      '        axisY: {\r\n' +[39m
+[36m      '          showLabel: true,\r\n' +[39m
+[36m      '          showGrid: true,\r\n' +[39m
+[36m      '          offset: 60\r\n' +[39m
+[36m      '        },\r\n' +[39m
+[36m      '        plugins: [\r\n' +[39m
+[36m      '          Chartist.plugins.tooltip({\r\n' +[39m
+[36m      '            appendToBody: true,\r\n' +[39m
+[36m      '            transformTooltipTextFnc: function(value) {\r\n' +[39m
+[36m      '              return value;\r\n' +[39m
+[36m      '            }\r\n' +[39m
+[36m      '          }),\r\n' +[39m
+[36m      '          Chartist.plugins.ctPointLabels({\r\n' +[39m
+[36m      '            labelInterpolationFnc: function(value) {\r\n' +[39m
+[36m      '              return value ;\r\n' +[39m
+[36m      '            },\r\n' +[39m
+[36m      "            labelPosition: 'top',\r\n" +[39m
+[36m      "            textAnchor: 'middle', //get it horizontal-wise middle of the bar\r\n" +[39m
+[36m      '            labelOffset:{x:0,y:30} //adding a little offset to get some space\r\n' +[39m
+[36m      '          })\r\n' +[39m
+[36m      '        ]\r\n' +[39m
+[36m      '      };\r\n' +[39m
+[36m      '      \r\n' +[39m
+[36m      "      new Chartist.Bar('#session-{{@index}}', data, options);\r\n" +[39m
+[36m      '    </script> {{/each}}\r\n' +[39m
+[36m      '    </div>\r\n' +[39m
+[36m      '</body>\r\n' +[39m
+[36m      '\r\n' +[39m
+[36m      '</html>',[39m
+[36m    helpers: '',[39m
+[36m    folder: { shortid: '_HhHT5P' }[39m
+[36m  },[39m
+[36m  options: {},[39m
+[36m  context: [Getter/Setter],[39m
+[36m  data: {},[39m
+[36m  cancel: [Function (anonymous)][39m
+[36m}[39m userLevel=true, rootId=xq7rb1sgta1t96r, id=xq7rb1sgta1t96r, fromEmitProfile=true
+2023-02-07T16:41:33.756Z - debug: [36m(console:log) 150[39m userLevel=true, rootId=xq7rb1sgta1t96r, id=xq7rb1sgta1t96r, fromEmitProfile=true
+2023-02-07T16:41:33.764Z - debug: [36m(console:log) Aquí el score: undefined[39m userLevel=true, rootId=xq7rb1sgta1t96r, id=xq7rb1sgta1t96r, fromEmitProfile=true
+2023-02-07T16:41:33.765Z - debug: [36m(console:log) Aquí las naves destruidas: undefined[39m userLevel=true, rootId=xq7rb1sgta1t96r, id=xq7rb1sgta1t96r, fromEmitProfile=true
+2023-02-07T16:41:33.782Z - debug: Base url not specified, skipping its injection. rootId=xq7rb1sgta1t96r, id=xq7rb1sgta1t96r, fromEmitProfile=true
+2023-02-07T16:41:33.786Z - debug: Rendering engine handlebars rootId=xq7rb1sgta1t96r, id=xq7rb1sgta1t96r, fromEmitProfile=true
+2023-02-07T16:41:33.863Z - debug: Executing recipe chrome-pdf rootId=xq7rb1sgta1t96r, id=xq7rb1sgta1t96r, fromEmitProfile=true
+2023-02-07T16:41:34.628Z - debug: Converting with chrome HeadlessChrome/105.0.5173.0 using chrome-pool strategy rootId=xq7rb1sgta1t96r, id=xq7rb1sgta1t96r, fromEmitProfile=true
+2023-02-07T16:41:35.267Z - debug: Page request: GET (document) file:///C:/Users/Kris/AppData/Local/Temp/jsreport/autocleanup/db32103d-c375-49a4-8ce1-84d8c7f295be-chrome-pdf.html rootId=xq7rb1sgta1t96r, id=xq7rb1sgta1t96r, fromEmitProfile=true
+2023-02-07T16:41:35.369Z - debug: Page request finished: GET (document) 200 file:///C:/Users/Kris/AppData/Local/Temp/jsreport/autocleanup/db32103d-c375-49a4-8ce1-84d8c7f295be-chrome-pdf.html rootId=xq7rb1sgta1t96r, id=xq7rb1sgta1t96r, fromEmitProfile=true
+2023-02-07T16:41:35.370Z - debug: Page request: GET (stylesheet) https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.css rootId=xq7rb1sgta1t96r, id=xq7rb1sgta1t96r, fromEmitProfile=true
+2023-02-07T16:41:35.370Z - debug: Page request: GET (script) https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.js rootId=xq7rb1sgta1t96r, id=xq7rb1sgta1t96r, fromEmitProfile=true
+2023-02-07T16:41:35.372Z - debug: Page request: GET (script) https://unpkg.com/chartist-plugin-tooltips@0.0.17 rootId=xq7rb1sgta1t96r, id=xq7rb1sgta1t96r, fromEmitProfile=true
+2023-02-07T16:41:35.372Z - debug: Page request: GET (script) https://unpkg.com/chartist-plugin-pointlabels@0.0.6 rootId=xq7rb1sgta1t96r, id=xq7rb1sgta1t96r, fromEmitProfile=true
+2023-02-07T16:41:36.297Z - warn: Report render failed
+(because) report cancelled by the client or closed network
+Error: Report cancelled by the client or closed network
+    at Object.close (C:\Users\Kris\Desktop\2DAM\Project\SpaceInVRs\backend\jsreport\node_modules\@jsreport\advanced-workers\lib\threadWorker.js:147:21)
+    at Object.release (C:\Users\Kris\Desktop\2DAM\Project\SpaceInVRs\backend\jsreport\node_modules\@jsreport\advanced-workers\lib\pool.js:38:22)
+    at EventEmitter.<anonymous> (C:\Users\Kris\Desktop\2DAM\Project\SpaceInVRs\backend\jsreport\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:399:18)
+    at Object.onceWrapper (node:events:627:28)
+    at EventEmitter.emit (node:events:513:28)
+    at Socket.<anonymous> (C:\Users\Kris\Desktop\2DAM\Project\SpaceInVRs\backend\jsreport\node_modules\@jsreport\jsreport-express\lib\routes.js:68:20)
+    at Object.onceWrapper (node:events:628:26)
+    at Socket.emit (node:events:525:35)
+    at TCP.<anonymous> (node:net:757:14) rootId=xq7rb1sgta1t96r, id=xq7rb1sgta1t96r
+2023-02-07T16:41:36.301Z - warn: Error during processing request at http://localhost:5488/templates/g-UQf7YbRO, details: Error: Report cancelled by the client or closed network
+    at Object.close (C:\Users\Kris\Desktop\2DAM\Project\SpaceInVRs\backend\jsreport\node_modules\@jsreport\advanced-workers\lib\threadWorker.js:147:21)
+    at Object.release (C:\Users\Kris\Desktop\2DAM\Project\SpaceInVRs\backend\jsreport\node_modules\@jsreport\advanced-workers\lib\pool.js:38:22)
+    at EventEmitter.<anonymous> (C:\Users\Kris\Desktop\2DAM\Project\SpaceInVRs\backend\jsreport\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:399:18)
+    at Object.onceWrapper (node:events:627:28)
+    at EventEmitter.emit (node:events:513:28)
+    at Socket.<anonymous> (C:\Users\Kris\Desktop\2DAM\Project\SpaceInVRs\backend\jsreport\node_modules\@jsreport\jsreport-express\lib\routes.js:68:20)
+    at Object.onceWrapper (node:events:628:26)
+    at Socket.emit (node:events:525:35)
+    at TCP.<anonymous> (node:net:757:14)

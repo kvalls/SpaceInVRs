@@ -27,14 +27,12 @@ console.log('AAAAAAAAAAAAAAAAAAAAAAA ' , req);
     }
 
     console.log(req.data.sessions[0].score)
-7
+
     req.data.score = req.data.sessions.score;
     req.data.ships_destroyed = req.data.sessions.ships_destroyed;
     req.data.bullets_fired = req.data.sessions.bullets_fired;
     req.data.powerups = req.data.sessions.powerups;
     req.data.user_id = req.data.sessions.user_id;
-
-    //req.data.finalscore = (req.data.sessions[0].score - req.data.sessions[0].bullets_fired);
     
 
     console.log("Aquí el score: " + req.data.sessions.score);
