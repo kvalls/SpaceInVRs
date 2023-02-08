@@ -12,7 +12,8 @@ function generateToken(user) {
     name: user.name,
     email: user.email,
     profile_img: user.profile_img,
-    password: user.password
+    password: user.password,
+    role_id: user.roleId
   };
  
   // .env should contain a line like JWT_SECRET=V3RY#1MP0RT@NT$3CR3T#
@@ -30,7 +31,8 @@ function getCleanUser(user) {
     name: user.name,
     email: user.email,
     profile_img: user.profile_img,
-    password: user.password
+    password: user.password,
+    role_id: user.roleId
   };
 }
  

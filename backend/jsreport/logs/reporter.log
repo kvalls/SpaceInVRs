@@ -55357,3 +55357,10 @@ Error: Error when evaluating engine handlebars for template /SpaceInVRs/SpaceInV
 2023-01-27T18:38:59.274Z - debug: Running chrome with params {"printBackground":true,"timeout":59865,"margin":{}} rootId=090uzma17wf0g4g, id=090uzma17wf0g4g, fromEmitProfile=true
 2023-01-27T18:38:59.281Z - debug: Skipping storing report. rootId=090uzma17wf0g4g, id=090uzma17wf0g4g, fromEmitProfile=true
 2023-01-27T18:38:59.282Z - info: Rendering request 6 finished in 420 ms rootId=090uzma17wf0g4g, id=090uzma17wf0g4g, fromEmitProfile=true
+2023-02-07T19:18:24.760Z - info: Initializing jsreport (version: 3.10.0, configuration file: jsreport.config.json, nodejs: 16.17.0)
+2023-02-07T19:18:24.764Z - info: Searching for available extensions in C:\Users\Kris\Desktop\2DAM\Project\SpaceInVRs\backend\jsreport\
+2023-02-07T19:18:24.774Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Kris\Desktop\2DAM\Project\SpaceInVRs\backend\jsreport\
+2023-02-07T19:18:24.800Z - info: Found 35 extension(s)
+2023-02-07T19:18:24.844Z - debug: Writing extension locations cache to C:\Users\Kris\AppData\Local\Temp\jsreport\core\locations.json
+2023-02-07T19:18:24.846Z - debug: Discovered 35 extensions
+2023-02-07T19:18:24.909Z - debug: Extension authentication@3.4.0 is disabled, skipping

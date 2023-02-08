@@ -65,6 +65,7 @@ export class AuthService {
           await this.storage.set("token", res.access_token);
           await this.storage.set("userdata", res.user);
           console.log("ey "+res.user.id+" ey");
+          console.log("uy "+res.user.role_id+" uy");
         }
       })
     );

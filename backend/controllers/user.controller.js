@@ -19,7 +19,8 @@ exports.create = (req, res) => {
     password: req.body.password,
     name: req.body.name,
     email: req.body.email,
-    profile_img: req.file? req.file.profile_img : ""
+    profile_img: req.file? req.file.profile_img : "",
+    role_id: req.body.role_id
   };
   User.findOne({ where: { email: user.email } })
     .then(data => {

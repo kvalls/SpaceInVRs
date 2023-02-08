@@ -33,7 +33,7 @@ exports.signin = (req, res) => {
     .catch(err => {
       res.status(500).send({
         message:
-          err.message || "Some error occurred while retrieving tutorials."
+          err.message || "Some error occurred while retrieving user."
       });
     });
 };
@@ -43,12 +43,13 @@ exports.isAuthenticated = (req, res, next) => {
   // check header or url parameters or post parameters for token
   // var token = req.body.token || req.query.token;
   var token = req.token;
-  
-  console.log('pruebas');
-  console.log(token);
-  console.log(req.headers.authorization);
+
+  console.log('jsreport auth start');
+  console.log(req.body);
+  //console.log(token);
+  //console.log(req.headers.authorization);
   jsreportauth = Buffer.from('myUsername:myPassword').toString('base64')
-  console.log('end pruebas');
+  console.log('jsreport auth end');
 
   if (req.headers.authorization === 'Basic ' + jsreportauth) {
     next();
@@ -94,5 +95,88 @@ exports.isAuthenticated = (req, res, next) => {
         });
       });
   });
+
+};
+
+exports.isAdmin = (req, res, next) => {
+  console.log(req.body);
+  const user = req.body.email;
+  const pwd = req.body.password;
+  // var token = req.token;
+  //const admin = req.body.isAdmin=1;
+  // check header or url parameters or post parameters for token
+  // var token = req.body.token || req.query.token;
+  // return 400 status if email/password is not exist
+  if (!user || !pwd) {
+    return res.status(400).json({
+      error: true,
+      message: "Email or Password required."
+    });
+  }
+
+  User.findOne({ where: { email: user } })
+    .then(data => {
+      var admin = data.roleId;
+
+      console.log('pruebas');
+      console.log(admin);
+      console.log('end pruebas');
+      if (admin != 1) {
+        return res.status(401).json({
+          error: true,
+          message: "You're not admin."
+        });
+      }
+
+      next();
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving user."
+      });
+    });
+
+
+  // if (!token) {
+  //   return res.status(400).json({
+  //     error: true,
+  //     message: "Token is required."
+  //   });
+  // }
+
+  // if (!admin) {
+  //   return res.status(400).json({
+  //     error: true,
+  //     message: "You're not admin"
+  //   });
+  // }
+  // check token that was passed by decoding token using secret
+  // .env should contain a line like JWT_SECRET=V3RY#1MP0RT@NT$3CR3T#
+
+  // jwt.verify(token, process.env.JWT_SECRET, function (err, user) {
+  //   if (err) return res.status(401).json({
+  //     error: true,
+  //     message: "Invalid token."
+  //   });
+
+  //   User.findByPk(user.id)
+  //     .then(data => {
+  //       // return 401 status if the user_id does not match.
+  //       if (!user.id) {
+  //         return res.status(401).json({
+  //           error: true,
+  //           message: "Invalid user."
+  //         });
+  //       }
+  //       // get basic user details
+  //       next();
+  //     })
+  //     .catch(err => {
+  //       res.status(500).send({
+  //         message: "Error retrieving User with id=" + id
+  //       });
+  //     });
+  // });
 
 };

@@ -18,6 +18,8 @@ export class ProfileCardComponent implements OnInit {
     this.authService.getUserData().then((data) => {
       this.user = data;
       console.log("holaola "+this.user.id+" holaola");
+      console.log("holaola "+this.user.role_id+" holaola");
+      console.log("eeee ",this.user," eeee");
     });
     // this.userService.getUser(this.user);
   }

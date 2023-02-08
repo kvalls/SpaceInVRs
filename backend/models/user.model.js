@@ -20,8 +20,7 @@ module.exports = (sequelize, Sequelize) => {
       foreignKey: {
         field: 'role_id',
         defaultValue: 2
-      },
-      as: "roles",
+      }
     })
   }
 
