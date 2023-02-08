@@ -55364,3 +55364,59 @@ Error: Error when evaluating engine handlebars for template /SpaceInVRs/SpaceInV
 2023-02-07T19:18:24.844Z - debug: Writing extension locations cache to C:\Users\Kris\AppData\Local\Temp\jsreport\core\locations.json
 2023-02-07T19:18:24.846Z - debug: Discovered 35 extensions
 2023-02-07T19:18:24.909Z - debug: Extension authentication@3.4.0 is disabled, skipping
+2023-02-07T19:18:24.911Z - info: Using extension base@3.0.1
+2023-02-07T19:18:24.919Z - info: Using extension child-templates@3.1.0
+2023-02-07T19:18:24.927Z - info: Using extension cli@3.2.3
+2023-02-07T19:18:24.934Z - info: Using extension components@3.3.0
+2023-02-07T19:18:24.937Z - info: Using extension data@3.1.0
+2023-02-07T19:18:24.939Z - info: Using extension express@3.6.0
+2023-02-07T19:18:25.599Z - info: Using extension freeze@3.0.1
+2023-02-07T19:18:25.605Z - info: Using extension fs-store@3.2.4
+2023-02-07T19:18:26.037Z - info: Using extension handlebars@3.2.1
+2023-02-07T19:18:26.040Z - info: Using extension import-export@3.2.0
+2023-02-07T19:18:26.065Z - info: Using extension jsrender@3.0.0
+2023-02-07T19:18:26.067Z - info: Using extension licensing@3.0.2
+2023-02-07T19:18:26.134Z - info: Using extension localization@3.2.1
+2023-02-07T19:18:26.136Z - info: Using extension npm@3.1.2
+2023-02-07T19:18:26.141Z - info: Using extension pdf-utils@3.7.0
+2023-02-07T19:18:26.144Z - info: Using extension reports@3.1.1
+2023-02-07T19:18:26.148Z - info: Using extension tags@3.1.1
+2023-02-07T19:18:26.153Z - info: Using extension text@3.0.0
+2023-02-07T19:18:26.154Z - info: Using extension version-control@3.1.2
+2023-02-07T19:18:26.182Z - info: Using extension assets@3.6.0
+2023-02-07T19:18:26.205Z - info: Using extension authorization@3.3.0
+2023-02-07T19:18:26.216Z - debug: Extension authorization@3.3.0 was disabled
+2023-02-07T19:18:26.217Z - info: Using extension browser-client@3.1.1
+2023-02-07T19:18:26.223Z - info: Using extension chrome-pdf@3.3.0
+2023-02-07T19:18:26.228Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2023-02-07T19:18:26.229Z - info: Using extension docx@3.6.0
+2023-02-07T19:18:26.234Z - info: Using extension html-to-xlsx@3.3.0
+2023-02-07T19:18:26.532Z - info: html-to-xlsx detected chrome as available html engine
+2023-02-07T19:18:26.533Z - info: Using extension pptx@3.4.0
+2023-02-07T19:18:26.538Z - info: Using extension scheduling@3.0.3
+2023-02-07T19:18:26.609Z - info: Using extension scripts@3.4.0
+2023-02-07T19:18:26.612Z - info: Using extension static-pdf@3.0.1
+2023-02-07T19:18:26.614Z - info: Using extension studio@3.9.0
+2023-02-07T19:18:26.835Z - info: Using extension xlsx@3.4.0
+2023-02-07T19:18:26.877Z - info: Using extension public-templates@3.0.0
+2023-02-07T19:18:26.879Z - debug: Extension public-templates@3.0.0 was disabled
+2023-02-07T19:18:26.880Z - info: Using extension sample-template@3.2.1
+2023-02-07T19:18:26.883Z - info: Using extension studio-theme-dark@3.0.1
+2023-02-07T19:18:26.887Z - info: Code sandboxing is disabled, users can potentially penetrate the local system if you allow code from external users to be part of your reports
+2023-02-07T19:18:26.887Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2023-02-07T19:18:26.887Z - info: Using fs provider for template store.
+2023-02-07T19:18:26.896Z - info: fs store is persisting using fs for C:\Users\Kris\Desktop\2DAM\Project\SpaceInVRs\backend\jsreport\data
+2023-02-07T19:18:26.908Z - info: fs store is loading data
+2023-02-07T19:18:26.945Z - info: fs store is initialized successfully
+2023-02-07T19:18:26.953Z - debug: studio default theme is: light
+2023-02-07T19:18:26.967Z - info: Creating default express app.
+2023-02-07T19:18:27.009Z - info: jsreport server successfully started on http port: 5488
+2023-02-07T19:18:27.012Z - info: Verifying license key free
+2023-02-07T19:18:27.013Z - info: Using free license
+2023-02-07T19:18:27.018Z - info: Initializing worker threads
+2023-02-07T19:18:27.019Z - debug: Extensions in workers: base, child-templates, components, data, express, handlebars, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, chrome-pdf, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx
+2023-02-07T19:18:27.363Z - info: 2 worker threads initialized in 345ms
+2023-02-07T19:18:27.364Z - info: Starting temp files cleanup with 180000ms threshold
+2023-02-07T19:18:27.364Z - info: reporter initialized
+2023-02-08T15:00:58.594Z - debug: fs journal was not synced for a while, need full reload
+2023-02-08T15:00:58.596Z - info: fs store is loading data
