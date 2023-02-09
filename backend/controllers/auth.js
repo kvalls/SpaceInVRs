@@ -7,7 +7,7 @@ const User = db.user;
 
 exports.signin = (req, res) => {
   const user = req.body.email;
-  const pwd  = req.body.password;
+  const pwd = req.body.password;
 
   // return 400 status if email/password is not exist
   if (!user || !pwd) {
@@ -61,7 +61,7 @@ exports.isAuthenticated = (req, res, next) => {
       message: "Token is required."
     });
   }
-  
+
   jwt.verify(token, process.env.JWT_SECRET, function (err, user) {
     if (err) return res.status(401).json({
       error: true,
@@ -112,7 +112,7 @@ exports.isAdmin = (req, res, next) => {
     User.findByPk(user.id)
       .then(data => {
         // return 401 status if the user_id does not match.
-        console.log("Can also get role from data.roleId: "+data.roleId);
+        console.log("Can also get role from data.roleId: " + data.roleId);
         if (!user.id) {
           return res.status(401).json({
             error: true,
