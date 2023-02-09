@@ -20,4 +20,4 @@ module.exports = app => {
     router.delete("/:id", auth.isAuthenticated, auth.isAdmin, roles.delete);
   
     app.use('/api/roles', router);
-  };
+};
