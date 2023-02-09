@@ -7,7 +7,7 @@ const User = db.user;
 
 exports.signin = (req, res) => {
   const user = req.body.email;
-  const pwd = req.body.password;
+  const pwd  = req.body.password;
 
   // return 400 status if email/password is not exist
   if (!user || !pwd) {
