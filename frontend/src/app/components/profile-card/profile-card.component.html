@@ -1,15 +1,20 @@
 <div class="item">
-  <ion-card >
+  <ion-card *ngIf="user">
     <ion-card-header>
-      <ion-card-title align="center">
-        {{ user.name }}
-      </ion-card-title>
+
+      <img class="image" src="http://localhost:4000/images/{{user.profile_img}}" alt="image" />
+      <div class="userinfo">
+        <ion-card-title>
+          {{ user.name }}
+        </ion-card-title>
+        <ion-card-subtitle class="dark">
+          {{ user.email }}
+        </ion-card-subtitle>
+        <ion-button size="small" (click)="handleClick()">Edit Profile</ion-button>
+      </div>
     </ion-card-header>
-    <ion-card-content align="center">
-        <img class="image" src="http://localhost:4000/images/{{user.profile_img}}" alt="image" />
-      <ion-card-subtitle class="dark" align="center">
-        {{ user.email }}
-      </ion-card-subtitle>
+    <ion-card-content>
+
     </ion-card-content>
   </ion-card>
 </div>

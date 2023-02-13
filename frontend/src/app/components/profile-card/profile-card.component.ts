@@ -24,8 +24,12 @@ export class ProfileCardComponent implements OnInit {
     // this.userService.getUser(this.user);
   }
 
+  handleClick() {
+    // window.location.replace('http://localhost:5488/templates/g-UQf7YbRO');
+  }
+
   ionViewDidEnter() {
-    // console.log(this.authService.getUserData());
+    console.log(this.authService.getUserData());
   }
 
 }

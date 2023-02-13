@@ -1,0 +1,37 @@
+ion-card-header {
+  display: flex;
+}
+
+ion-card-title {
+  // display: flex;
+  // align-content: center;
+  margin-bottom: 10%;
+  margin-top:10%;
+  text-transform: capitalize;
+}
+
+ion-button {
+  // size: 1;
+  --background: #960000;
+  white-space: unset;
+  margin-top: 15%;
+  font-size: 3vw;
+  text-transform: capitalize;
+}
+
+
+.userinfo {
+  // display: inline-grid;
+  flex-grow: 1;
+  text-align: center;
+  margin: 1%; // align-content: center;
+  margin-left: 7%;
+}
+
+
+.image {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  border: 1px solid;
+}

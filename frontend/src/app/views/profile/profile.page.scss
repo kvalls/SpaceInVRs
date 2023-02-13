@@ -9,6 +9,7 @@ ion-item{
 
 ion-button{
   --background: #050505;
+  --white-space: unset;
 }
 
 a{
@@ -18,13 +19,11 @@ a{
 
 
 #container {
-    text-align: center;
+    // text-align: center;
   
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    position: center;
+    margin: 5%;
+    // transform: translateY(-50%);
   }
   
   #container strong {
