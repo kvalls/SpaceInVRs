@@ -68,6 +68,7 @@ echo NODE_ENV=development >> .env
 
 echo Installing backend...
 CALL npm i --force
+CALL sequelize-cli db:migrate
 
 cd ../frontend
 echo Installing frontend...

@@ -35,3 +35,34 @@ ion-button {
   display: inline-block;
   border: 1px solid;
 }
+
+ion-modal {
+  --height: 50%;
+  --border-radius: 16px;
+  --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.contentmodal{
+  // --background: #960000;
+  // --color: #960000;
+}
+
+ion-modal::part(backdrop) {
+  background: rgb(0, 0, 0);
+  opacity: 1;
+}
+
+ion-modal ion-toolbar {
+  --background: #960000;
+  --color: white;
+}
+
+ion-content ion-modal {
+  --background: #960000;
+  --color: #960000;
+}
+
+ion-modal ion-content{
+  --background: #960000;
+  --color: #960000;
+}
