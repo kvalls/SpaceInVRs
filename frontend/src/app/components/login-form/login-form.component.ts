@@ -13,6 +13,7 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 export class LoginFormComponent implements OnInit {
   ionicForm: FormGroup;
   isSubmitted = false;
+  
   constructor(public formBuilder: FormBuilder,
     private router: Router,
     private authService: AuthService,

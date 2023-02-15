@@ -1,3 +1,8 @@
+ion-card {
+  --border-radius: 16px;
+  --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
 ion-card-header {
   display: flex;
 }
@@ -6,7 +11,7 @@ ion-card-title {
   // display: flex;
   // align-content: center;
   margin-bottom: 10%;
-  margin-top:10%;
+  margin-top: 10%;
   text-transform: capitalize;
 }
 
@@ -33,18 +38,35 @@ ion-button {
   width: 150px;
   height: 150px;
   display: inline-block;
-  border: 1px solid;
+  // border: 1px solid;
+  background: black;
 }
 
+.modalimage {
+  flex-grow: 1;
+  margin: 0%;
+}
+
+ion-col{
+  text-align: center;
+}
+
+
+
 ion-modal {
-  --height: 50%;
+  --height: 55%;
+  --width: 75%;
   --border-radius: 16px;
   --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
-.contentmodal{
-  // --background: #960000;
-  // --color: #960000;
+ion-modal ion-button {
+  // size: 1;
+  --background: #960000;
+  // white-space: unset;
+  // margin: 5%;
+  // font-size: 3vw;
+  // text-transform: capitalize;
 }
 
 ion-modal::part(backdrop) {
@@ -62,7 +84,68 @@ ion-content ion-modal {
   --color: #960000;
 }
 
-ion-modal ion-content{
+ion-modal ion-content {
   --background: #960000;
   --color: #960000;
+  --ion-item-background: auto;
+  display: flex;
+}
+
+.modalsubmit {
+  margin: 2%;
+  display: flex;
+  align-items: center;
+}
+
+.modalbutton {
+  font-size: 4vw;
+  color: white;
+  background-color: black;
+  flex-grow: 1;
+  align-self: center;
+  margin: 0%; // align-content: center;
+  margin-bottom: 5%;
+  // margin-inline: 15%;
+  // margin-left: 2%;
+  // margin-right: 2%;
+  // margin-left: 10%;
+  padding: 0%;
+  // margin-left: 15%;
+  // margin-right: 15%;
+}
+
+.modalsubmitbutton {
+  font-size: 4vw;
+  color: white;
+  background-color: black;
+  flex-grow: 1;
+  align-self: center;
+  margin: 1% // align-content: center;
+}
+
+
+a {
+  color: rgb(0, 12, 141);
+}
+
+.error {
+  color: red;
+  --margin-bottom: 25px;
+}
+
+form ion-content {
+  --color: rgb(255, 255, 255);
+  --padding-top: 100px;
+}
+
+form ion-item {
+  --background: #ffffff;
+  --color: rgb(0, 0, 0);
+  padding-bottom: 25px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.lastitem{
+  padding-bottom: unset;
 }

@@ -2,7 +2,8 @@
   <ion-card *ngIf="user">
     <ion-card-header>
 
-      <img class="image" src="http://localhost:4000/images/{{user.profile_img}}" alt="image" />
+      <img *ngIf="user.profile_img" class="image" src="http://localhost:4000/images/{{user.profile_img}}" alt="image" />
+      <img *ngIf="!user.profile_img" class="image" src="../../assets/icon/imgplaceholder.png" alt="image" />
       <div class="userinfo">
         <ion-card-title>
           {{ user.name }}
@@ -10,56 +11,97 @@
         <ion-card-subtitle class="dark">
           {{ user.email }}
         </ion-card-subtitle>
-        <ion-button size="small"  id="open-modal" expand="block">Edit Profile</ion-button>
+
+        <ion-button size="small" id="open-modal" expand="block">Edit Profile</ion-button>
       </div>
     </ion-card-header>
     <ion-modal #modal trigger="open-modal">
       <ng-template>
         <ion-content class="modal">
-          <ion-toolbar>
-            <ion-title>Modal</ion-title>
-            <ion-buttons slot="end">
-              <ion-button color="light" (click)="modal.dismiss()">Close</ion-button>
-            </ion-buttons>
-          </ion-toolbar>
-          <ion-list>
-            <ion-item>
-              <ion-avatar slot="start">
-                <ion-img src="https://i.pravatar.cc/300?u=b"></ion-img>
-              </ion-avatar>
-              <ion-label>
-                <h2>Connor Smith</h2>
-                <p>Sales Rep</p>
-              </ion-label>
-            </ion-item>
-            <ion-item>
-              <ion-avatar slot="start">
-                <ion-img src="https://i.pravatar.cc/300?u=a"></ion-img>
-              </ion-avatar>
-              <ion-label>
-                <h2>Daniel Smith</h2>
-                <p>Product Designer</p>
-              </ion-label>
-            </ion-item>
-            <ion-item>
-              <ion-avatar slot="start">
-                <ion-img src="https://i.pravatar.cc/300?u=d"></ion-img>
-              </ion-avatar>
-              <ion-label>
-                <h2>Greg Smith</h2>
-                <p>Director of Operations</p>
-              </ion-label>
-            </ion-item>
-            <ion-item>
-              <ion-avatar slot="start">
-                <ion-img src="https://i.pravatar.cc/300?u=e"></ion-img>
-              </ion-avatar>
-              <ion-label>
-                <h2>Zoey Smith</h2>
-                <p>CEO</p>
-              </ion-label>
-            </ion-item>
-          </ion-list>
+          <ion-grid>
+            <ion-row>
+              <ion-col class="modalimage">
+                <ion-img class="image" *ngIf="capturedPhoto" [src]="capturedPhoto" (click)="takePhoto()"></ion-img>
+                <ion-img class="image" *ngIf="!capturedPhoto" src="../../assets/icon/imgplaceholder.png"
+                  (click)="takePhoto()"></ion-img>
+              </ion-col>
+              <ion-col position="absolute">
+                <ion-row>
+                  <ion-button expand="block" class="modalbutton" color="black" (click)="takePhoto()">
+                    <ion-icon slot="start" name="camera-outline"></ion-icon>
+                    Take
+                  </ion-button>
+                </ion-row>
+                <ion-row>
+                  <ion-button expand="block" class="modalbutton" color="black" (click)="pickImage()">
+                    <ion-icon expand="block" slot="start" name="image-outline"></ion-icon>
+                    Upload
+                  </ion-button>
+                </ion-row>
+                <ion-row>
+                  <ion-button expand="block" class="modalbutton" color="black" (click)="discardImage()">
+                    <ion-icon slot="start" name="aperture"></ion-icon>
+                    Discard
+                  </ion-button>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <form [formGroup]="ionicForm" (ngSubmit)="register()" novalidate>
+            <ion-grid>
+              <ion-row color="black" class="ion-justify-content-center">
+                <ion-col class="align-self-center" size-md="6" size-lg="5" size-xs="12">
+                  <div padding>
+                    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.required">
+                      Name is required.
+                    </span>
+                    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.minlength">
+                      Name should be min 2 chars long.
+                    </span>
+                    <ion-item>
+                      <ion-input formControlName="name" name="name" type="name" placeholder="Name"></ion-input>
+                    </ion-item>
+                    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.required">
+                      Email is required.
+                    </span>
+                    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.pattern">
+                      Please provide a valid email.
+                    </span>
+                    <ion-item>
+                      <ion-input formControlName="email" name="email" type="email" placeholder="Email" ngModel
+                        required></ion-input>
+                    </ion-item>
+                    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.required">
+                      Password is required.
+                    </span>
+                    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.minlength">
+                      Password should be min 4 chars long.
+                    </span>
+                    <ion-item>
+                      <ion-input formControlName="password" name="password" type="password" placeholder="Password"
+                        ngModel required></ion-input>
+                    </ion-item>
+                    <!-- <ion-item>
+                          <ion-input name="confirm" type="password" placeholder="Password again" ngModel required></ion-input>
+                        </ion-item> -->
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </form>
+
+          <div padding class="modalsubmit">
+
+            <ion-button size="large" class="modalsubmitbutton" color="black" type="submit">
+              Delete
+            </ion-button>
+
+
+            <ion-button size="large" class="modalsubmitbutton" color="black" type="submit">
+              Update
+            </ion-button>
+
+          </div>
         </ion-content>
       </ng-template>
     </ion-modal>
