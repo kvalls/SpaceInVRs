@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
-import { ProfilePageRoutingModule } from 'src/app/views/profile/profile-routing.module';
+import { ProfilePageRoutingModule } from '../profile/profile-routing.module';
 import { AuthService } from '../../shared/auth/auth.service';
 import { User } from '../../shared/auth/user';
 

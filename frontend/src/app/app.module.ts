@@ -13,11 +13,12 @@ import { AppComponent } from './app.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './shared/auth/auth.module';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AuthModule, ComponentsModule, ReactiveFormsModule, FormsModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AuthModule, ComponentsModule, ReactiveFormsModule, FormsModule, NgChartsModule],
   providers: [
     StatusBar,
     SplashScreen,
