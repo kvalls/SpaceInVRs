@@ -78,7 +78,7 @@
                       Password should be min 4 chars long.
                     </span>
                     <ion-item>
-                      <ion-input formControlName="password" name="password" type="password" placeholder="Password"
+                      <ion-input class="lastitem" formControlName="password" name="password" type="password" placeholder="Password"
                         ngModel required></ion-input>
                     </ion-item>
                     <!-- <ion-item>
@@ -106,7 +106,15 @@
       </ng-template>
     </ion-modal>
     <ion-card-content>
-
+      <canvas height="250px" baseChart class="chart"
+        [data]="barChartData"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [type]="barChartType"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)">
+</canvas>
+<!-- <ion-button size="small" (click)="randomize()">Update</ion-button> -->
     </ion-card-content>
   </ion-card>
 </div>

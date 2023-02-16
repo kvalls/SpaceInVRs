@@ -14,6 +14,11 @@ ion-card-title {
   margin-top: 10%;
   text-transform: capitalize;
 }
+ion-card-content canvas{
+  background-color: #2E2E33;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
 
 ion-button {
   // size: 1;
