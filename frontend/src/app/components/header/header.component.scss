@@ -9,19 +9,26 @@
   align-items: center;
   justify-content: center;
   flex: 1;
+  margin: auto;
 
 }
 .right{
-  flex: 1;
+  flex: 1; 
+  margin: auto;
 
 }
 
 .center{
+  flex: 2;
+  
+  margin: auto;
   justify-content: center;
   align-content: center;
   align-items: center;
   color:#ffffff;
-  font-size: 40px;
+  vertical-align:middle;
+  font-size: 5vw;
+  text-align: center;
 }
 
 .header{

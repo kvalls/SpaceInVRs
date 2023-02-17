@@ -17,11 +17,17 @@ ion-button{
   --background: #960000;
   white-space: unset;
   margin: auto;
-  font-size: 4.4vw;
+  // font-size: 3vw;
+  max-width: 400px;
+  max-height: 900px;
 }
 
 .buttons{
   padding-bottom:25px;
+  max-width: 400px;
+  max-height: 900px;
+  margin: auto;
+  margin-top: 1%;
 }
 
 a{

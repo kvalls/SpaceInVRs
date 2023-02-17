@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Report</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.js"></script>
+    <script src="https://unpkg.com/chartist-plugin-tooltips@0.0.17"></script>
+    <script src="https://unpkg.com/chartist-plugin-pointlabels@0.0.6"></script>
+    <style>
+        .session {
+            width: 450px;
+            /* adjust this as needed to make the charts smaller */
+            height: 400px;
+            /* adjust this as needed to make the charts smaller */
+            margin: 5px auto;
+            /* center the charts horizontally and add some vertical margin */
+            page-break-inside: avoid;
+            /* prevent a session from overlapping two pages of the PDF */
+            padding-top: 5%;
+        }
+
+        .ct-label {
+            font-size: 12px;
+            /* adjust this as needed to change the font size of the labels */
+            fill: #000;
+            /* adjust this as needed to change the color of the labels */
+        }
+        
+
+        .ct-bar {
+            stroke-width: 25px;
+            /* adjust this as needed to change the width of the bars */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>{{user.name}}All Sessions Report</h1>
+    {{#each sessions}}
+    <div class="session">
+        <h2>Session {{@index}} User {{user_id}}</h2> 
+        
+        <p>Final Score = {{finalscore}}</p>
+        <div class="ct-chart ct-perfect-fourth" id="session-{{@index}}"></div>
+        <script>
+
+
+      var data = {
+        labels: ['Score', 'Ships Destroyed', 'Bullets Fired', 'Powerups'],
+        series: [[{{score}}, {{ships_destroyed}}, {{bullets_fired}}, {{powerups}}]]
+      };
+      
+      var options = {
+        axisX: {
+          showLabel: true,
+          showGrid: false
+        },
+        axisY: {
+          showLabel: true,
+          showGrid: true,
+          offset: 60
+        },
+        plugins: [
+          Chartist.plugins.tooltip({
+            appendToBody: true,
+            transformTooltipTextFnc: function(value) {
+              return value;
+            }
+          }),
+          Chartist.plugins.ctPointLabels({
+            labelInterpolationFnc: function(value) {
+              return value ;
+            },
+            labelPosition: 'top',
+            textAnchor: 'middle', //get it horizontal-wise middle of the bar
+            labelOffset:{x:0,y:30} //adding a little offset to get some space
+          })
+        ]
+      };
+      
+      new Chartist.Bar('#session-{{@index}}', data, options);
+    </script> {{/each}}
+    </div>
+</body>
+
+</html>

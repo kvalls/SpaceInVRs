@@ -1,3 +1,4 @@
+import { AuthService } from './../auth/auth.service';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Storage } from '@ionic/storage';
@@ -31,4 +32,19 @@ export class SessionService {
     console.log(myOptions)
     return this.httpClient.get(`${this.AUTH_SERVER_ADDRESS}/api/sessions`, myOptions);
   }
+
+  getOwnSessions(token, id) {
+    // this.authService.getUserData().then((data) => {
+    //   this.user = data;
+    //   console.log("holaola "+this.user.id+" holaola");
+    //   console.log("holaola "+this.user.role_id+" holaola");
+    //   console.log("eeee ",this.user," eeee");
+    // });
+    
+    let myOptions = this.getOptions(token);
+    console.log(myOptions)
+    return this.httpClient.get(`${this.AUTH_SERVER_ADDRESS}/api/sessions/user/` + id, myOptions);
+  }
+
+
 }
