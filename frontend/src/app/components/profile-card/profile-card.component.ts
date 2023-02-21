@@ -11,6 +11,7 @@ import { BaseChartDirective } from 'ng2-charts';
 import { Storage } from '@ionic/storage';
 
 import DataLabelsPlugin from 'chartjs-plugin-datalabels';
+import { ViewDidEnter, ViewWillEnter } from '@ionic/angular';
 
 
 @Component({
@@ -18,7 +19,7 @@ import DataLabelsPlugin from 'chartjs-plugin-datalabels';
   templateUrl: './profile-card.component.html',
   styleUrls: ['./profile-card.component.scss'],
 })
-export class ProfileCardComponent implements OnInit {
+export class ProfileCardComponent implements OnInit, ViewDidEnter {
 
   highestScore: string = "";
   ownScores: any = [];
@@ -32,7 +33,7 @@ export class ProfileCardComponent implements OnInit {
 
   constructor(
     private userService: UserService, 
-    private authService: AuthService,
+    public authService: AuthService,
     private photoService: PhotoService,
     private storage: Storage,
     private sessionService: SessionService,
@@ -40,15 +41,58 @@ export class ProfileCardComponent implements OnInit {
     public formBuilder: FormBuilder) { }
 
   ngOnInit() {
-    this.getOwnSessions();
-    
+
     this.authService.getUserData().then((data) => {
       this.user = data;
-      console.log("holaola "+this.user.id+" holaola");
-      console.log("holaola "+this.user.role_id+" holaola");
-      console.log("eeee ",this.user," eeee");
+      // console.log("holaola "+this.user.id+" holaola");
+      // console.log("holaola "+this.user.role_id+" holaola");
+      // console.log("eeee ",this.user," eeee");
+      // console.log("eeee ",this.user.email," eeee");
+      this.ionicForm.setValue({
+        name: this.user.name,
+        email: this.user.email,
+        password: this.user.password
+      });
     });
+
+    this.ionicForm = this.formBuilder.group({
+      name: ['', [Validators.required, Validators.minLength(2)]],
+      email: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
+      password: ['', [Validators.required, Validators.minLength(4)]]
+    })
+    this.getOwnSessions();
+
     // this.userService.getUser(this.user);
+    // this.updateChart();
+  }
+
+  handleClick() {
+    // window.location.replace('http://localhost:5488/templates/g-UQf7YbRO');
+  }
+
+  refreshModal(){
+    this.authService.getUserData().then((data) => {
+      this.user = data;
+      this.ionicForm.setValue({
+        name: this.user.name,
+        email: this.user.email,
+        password: this.user.password
+      });
+    });
+
+  }
+
+  ionViewDidEnter() {
+    // console.log(this.authService.getUserData());
+    // this.updateChart();
+
+    this.authService.getUserData().then((data) => {
+      this.user = data;
+      // console.log("holaola "+this.user.id+" holaola");
+      // console.log("holaola "+this.user.role_id+" holaola");
+      // console.log("eeee ",this.user," eeee");
+      // console.log("eeee ",this.user.email," eeee");
+    });
 
     this.ionicForm = this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
@@ -56,16 +100,9 @@ export class ProfileCardComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(4)]]
     })
 
-    this.updateChart();
-  }
-
-  handleClick() {
-    // window.location.replace('http://localhost:5488/templates/g-UQf7YbRO');
-  }
-
-  ionViewDidEnter() {
-    console.log(this.authService.getUserData());
-    this.updateChart();
+    this.getOwnSessions();
+    this.isSubmitted = false;
+    this.capturedPhoto = "";
   }
 
   takePhoto() {
@@ -91,23 +128,31 @@ export class ProfileCardComponent implements OnInit {
     return this.ionicForm.controls;
   }
 
-  register() {
+  async update() {
+    let token = await this.storage.get("token");
     this.isSubmitted = true;
     if (!this.ionicForm.valid) {
       console.log('Please provide all the required values!')
       return false;
     } else {
+      console.log('hello?')
       console.log(this.ionicForm.value);
+      let blob = null;
+      if (this.capturedPhoto != "") {
+        const response = await fetch(this.capturedPhoto);
+        blob = await response.blob();
+      }
       let user: User = {
-        id: null,
+        id: this.user.id,
         email: this.ionicForm.value.email,
         password: this.ionicForm.value.password,
         name: this.ionicForm.value.name,
-        role_id: 2,
+        // role_id: 2,
       };
-      this.authService.register(user).subscribe((res) => {
-        this.router.navigateByUrl('/profile');
+      console.log('huh??')
+      this.userService.updateUser(token, user, blob).subscribe((res) => {
         this.ionicForm.reset();
+        this.router.navigateByUrl('/home');  
       });
     }
     
@@ -133,7 +178,7 @@ export class ProfileCardComponent implements OnInit {
       console.log("User Logged in. This is this user's list:");
       console.log(res);
       this.ownSessions = res;
-      console.log("lalalla "+this.ownSessions[0].score);
+      // console.log("lalalla "+this.ownSessions[0].score);
 
       // Array of the last 7 user's sessions' scores because slice(-7)
       this.ownSessions.slice(-7).forEach(session => {
@@ -147,8 +192,13 @@ export class ProfileCardComponent implements OnInit {
 
       //Getting the highest score
       this.highestScore = this.ownSessions.reduce((maxScore, session) => {
+        if(session.score != null){
         const score = session.score;
         return score > maxScore ? score : maxScore;
+        }else{
+          return 0
+        }
+        
       }, 0);
       
       console.log(`The highest score is ${this.highestScore}`);
@@ -162,7 +212,7 @@ export class ProfileCardComponent implements OnInit {
 
       console.log(this.ownScores);
       console.log(this.ownScoresLabels);
-
+      this.updateChart();
       
     }, error => {
       console.log(error);

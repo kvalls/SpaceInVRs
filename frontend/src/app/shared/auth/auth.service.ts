@@ -48,8 +48,8 @@ export class AuthService {
       tap(async (res:  AuthResponse ) => {
 
         if (res.user) {
-          await this.storage.set("token", res.access_token);
-          await this.storage.set("userdata", res.user);
+          this.storage.set("token", res.access_token);
+          this.storage.set("userdata", res.user);
         }
       })
 
@@ -62,8 +62,8 @@ export class AuthService {
 
         if (res.user) {
           this.setLoginStatus(1);
-          await this.storage.set("token", res.access_token);
-          await this.storage.set("userdata", res.user);
+          this.storage.set("token", res.access_token);
+          this.storage.set("userdata", res.user);
           console.log("ey "+res.user.id+" ey");
           console.log("uy "+res.user.role_id+" uy");
         }

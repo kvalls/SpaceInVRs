@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 import { AuthService } from './../../shared/auth/auth.service';
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public authService: AuthService,  private router: Router) { }
+  constructor(public authService: AuthService,  private router: Router, private navController: NavController) { }
 
   ngOnInit(): void {
     this.updateAuthInfo();
@@ -26,7 +27,8 @@ export class HeaderComponent implements OnInit {
   logout() {
     this.authService.logout();
     this.updateAuthInfo();
-    this.router.navigateByUrl("/home");
+    this.navController.navigateBack(['/home']);
+    // this.router.navigateByUrl("/home");
   }
 
 }

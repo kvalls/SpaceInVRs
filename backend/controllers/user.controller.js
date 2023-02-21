@@ -6,6 +6,8 @@ const  bcrypt  =  require('bcryptjs');
 
 // Create and Save a new User
 exports.create = (req, res) => {
+  console.log("testingggggg "+JSON.stringify(req.params));
+  console.log("testyggggggggg "+JSON.stringify(req.body));
   //Validate request
   if (!req.body.password || !req.body.email) {
     res.status(400).send({
@@ -56,7 +58,7 @@ exports.create = (req, res) => {
     .catch(err => {
       res.status(500).send({
         message:
-          err.message || "Some error occurred while retrieving tutorials."
+          err.message || "Some error occurred while retrieving users."
       });
     });
 
@@ -72,7 +74,7 @@ exports.findAll = (req, res) => {
     .catch(err => {
       res.status(500).send({
         message:
-          err.message || "Some error occurred while retrieving tutorials."
+          err.message || "Some error occurred while retrieving users."
       });
     });
 };
@@ -94,9 +96,22 @@ exports.findOne = (req, res) => {
 
 // Update a User by the id in the request
 exports.update = (req, res) => {
-  const id = req.params.id;
+  console.log("test "+JSON.stringify(req.params));
+  console.log("testy "+JSON.stringify(req.body));
   req.body.password = bcrypt.hashSync(req.body.password);
-  User.update(req.body, {
+
+
+  // Create a User
+  let user = {
+    password: req.body.password,
+    name: req.body.name,
+    email: req.body.email,
+    profile_img: req.file? req.file.profile_img : "",
+    role_id: req.body.role_id
+  };
+  const id = req.params.id;
+  
+  User.update(user, {
     where: { id: id }
   })
     .then(num => {

@@ -11,18 +11,18 @@ import { Storage } from '@ionic/storage';
 })
 export class ProfilePage implements OnInit {
 
-  constructor(private authService: AuthService, private router: Router, private sessionService: SessionService,
+  constructor(public authService: AuthService, private router: Router, private sessionService: SessionService,
     private storage: Storage) { }
 
   ngOnInit() {
     console.log("not working below");
     // this.getOwnSessions();
     console.log("not working above");
-    this.getSessions();
+    // this.getSessions();
   }
 
   ionViewDidEnter(){
-    // this.getSessions();
+    this.getSessions();
     // this.getOwnSessions();
   }
 

@@ -1,6 +1,6 @@
 <app-header></app-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" *ngIf="authService.loginStatus === 1">
   <div id="container">
     <app-profile-card></app-profile-card>
     <app-reports></app-reports>

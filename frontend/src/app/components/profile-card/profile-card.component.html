@@ -1,4 +1,4 @@
-<div class="item">
+<div class="item" *ngIf="authService.loginStatus === 1">
   <ion-card *ngIf="user">
     <ion-card-header>
 
@@ -12,7 +12,7 @@
           {{ user.email }}
         </ion-card-subtitle>
 
-        <ion-button size="small" id="open-modal">Edit Profile</ion-button>
+        <ion-button size="small" id="open-modal" (click)="refreshModal()">Edit Profile</ion-button>
       </div>
     </ion-card-header>
     <ion-modal #modal trigger="open-modal">
@@ -47,10 +47,10 @@
               </ion-col>
             </ion-row>
           </ion-grid>
-          <form [formGroup]="ionicForm" (ngSubmit)="register()" novalidate>
+          <form [formGroup]="ionicForm" (ngSubmit)="update()" novalidate>
             <ion-grid>
               <ion-row color="black" class="ion-justify-content-center">
-                <ion-col class="align-self-center" size-md="6" size-lg="5" size-xs="12">
+                <ion-col class="align-self-center">
                   <div padding>
                     <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.required">
                       Name is required.
@@ -68,7 +68,7 @@
                       Please provide a valid email.
                     </span>
                     <ion-item>
-                      <ion-input formControlName="email" name="email" type="email" placeholder="Email" ngModel
+                      <ion-input formControlName="email" name="email" type="email" placeholder="Email" 
                         required></ion-input>
                     </ion-item>
                     <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.required">
@@ -79,7 +79,7 @@
                     </span>
                     <ion-item>
                       <ion-input class="lastitem" formControlName="password" name="password" type="password"
-                        placeholder="Password" ngModel required></ion-input>
+                        placeholder="Password" required></ion-input>
                     </ion-item>
                     <!-- <ion-item>
                           <ion-input name="confirm" type="password" placeholder="Password again" ngModel required></ion-input>
@@ -88,20 +88,21 @@
                 </ion-col>
               </ion-row>
             </ion-grid>
+            <div padding class="modalsubmit">
+
+              <ion-button size="large" class="modalsubmitbutton" color="black" type="submit">
+                Delete
+              </ion-button>
+  
+  
+              <ion-button size="large" class="modalsubmitbutton" color="black" type="submit">
+                Update
+              </ion-button>
+  
+            </div>
           </form>
 
-          <div padding class="modalsubmit">
 
-            <ion-button size="large" class="modalsubmitbutton" color="black" type="submit">
-              Delete
-            </ion-button>
-
-
-            <ion-button size="large" class="modalsubmitbutton" color="black" type="submit">
-              Update
-            </ion-button>
-
-          </div>
         </ion-content>
       </ng-template>
     </ion-modal>

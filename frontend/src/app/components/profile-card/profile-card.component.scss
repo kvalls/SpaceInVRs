@@ -78,6 +78,23 @@ ion-modal {
   --width: 75%;
   --border-radius: 16px;
   --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  max-width: 420px;
+  max-height: 945px;
+  margin: auto;
+  // max-width: 400px;
+  // max-height: 900px;
+}
+
+#ion-page{
+  --height: 55%;
+  --width: 75%;
+  --border-radius: 16px;
+  --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  // max-width: 420px;
+  // max-height: 945px;
+  margin: auto;
+  max-width: 400px;
+  max-height: 900px;
 }
 
 ion-modal ion-button {
@@ -94,6 +111,8 @@ ion-modal ion-button {
 ion-modal::part(backdrop) {
   background: rgb(0, 0, 0);
   opacity: 1;
+  max-width: none !important;
+  max-height: none !important;
 }
 
 ion-modal ion-toolbar {
@@ -104,6 +123,8 @@ ion-modal ion-toolbar {
 ion-content ion-modal {
   --background: #960000;
   --color: #960000;
+  max-width: 400px;
+  max-height: 900px;
 }
 
 ion-modal ion-content {
@@ -111,6 +132,8 @@ ion-modal ion-content {
   --color: #960000;
   --ion-item-background: auto;
   display: flex;
+  max-width: 400px;
+  max-height: 900px;
 }
 
 .modalsubmit {
@@ -121,7 +144,7 @@ ion-modal ion-content {
 
 .modalbutton {
   max-width: 2cm;
-  font-size: 3vw;
+  font-size: min(3vw, 16px);
   color: white;
   background-color: black;
   flex-grow: 1;
@@ -140,7 +163,7 @@ ion-modal ion-content {
 }
 
 .modalsubmitbutton {
-  font-size: 4vw;
+  font-size: min(4vw, 16px);
   color: white;
   background-color: black;
   flex-grow: 1;
@@ -169,8 +192,8 @@ form ion-item {
   --background: #ffffff;
   --color: rgb(0, 0, 0);
   padding-bottom: 25px;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .lastitem{

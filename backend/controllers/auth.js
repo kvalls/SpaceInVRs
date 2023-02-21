@@ -20,6 +20,7 @@ exports.signin = (req, res) => {
   // return 401 status if the credential is not match.
   User.findOne({ where: { email: user } })
     .then(data => {
+      console.log("HOLA AQUÍ"+data.email);
       const result = bcrypt.compareSync(pwd, data.password);
       if (!result) return res.status(401).send('Password not valid!');
 
@@ -33,7 +34,7 @@ exports.signin = (req, res) => {
     .catch(err => {
       res.status(500).send({
         message:
-          err.message || "Some error occurred while retrieving user."
+        "User not found" ||  err.message 
       });
     });
 };
@@ -67,7 +68,7 @@ exports.isAuthenticated = (req, res, next) => {
       error: true,
       message: "Invalid token."
     });
-    console.log("User's role: " + user.role_id);
+    // console.log("User's role: " + user.role_id);
     User.findByPk(user.id)
       .then(data => {
         // return 401 status if the user_id does not match.
@@ -112,7 +113,7 @@ exports.isAdmin = (req, res, next) => {
     User.findByPk(user.id)
       .then(data => {
         // return 401 status if the user_id does not match.
-        console.log("Can also get role from data.roleId: " + data.roleId);
+        // console.log("Can also get role from data.roleId: " + data.roleId);
         if (!user.id) {
           return res.status(401).json({
             error: true,
