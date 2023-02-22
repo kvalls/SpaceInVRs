@@ -1,0 +1,212 @@
+[
+    {
+        "id": 1,
+        "password": "$2a$10$/v8d4qLcI059xrs1FoIFzeRqG/FZFNuCacx3omMbSXClljDwLwQUS",
+        "name": "pruebacuatr",
+        "email": "test44",
+        "profile_img": null,
+        "createdAt": "2022-11-29T15:23:26.000Z",
+        "updatedAt": "2022-11-29T15:23:26.000Z",
+        "roleId": null
+    },
+    {
+        "id": 2,
+        "password": "$2a$10$z./rUO..heOSlnf7w88KluAXfylAAnwgE/ZdjeU4EJBmeGxwfjw16",
+        "name": "algoalgo",
+        "email": "arroba",
+        "profile_img": null,
+        "createdAt": "2022-11-29T19:18:45.000Z",
+        "updatedAt": "2022-11-29T19:18:45.000Z",
+        "roleId": null
+    },
+    {
+        "id": 3,
+        "password": "$2a$10$5i1d.7Y4QA5.iroq8By9HuKGBuhLR4jDF0s5B903AtN7kTGqk0nUS",
+        "name": "ayayay",
+        "email": "testing",
+        "profile_img": null,
+        "createdAt": "2022-11-29T19:27:48.000Z",
+        "updatedAt": "2022-11-29T19:27:48.000Z",
+        "roleId": 2
+    },
+    {
+        "id": 4,
+        "password": "$2a$10$F12gbykEj91GuEyrlHCxt.8PBYZXsqb3Ljm5197n9c8tO6yBBXFY6",
+        "name": "Prueeeeebas",
+        "email": "prueba@gmail.com",
+        "profile_img": "",
+        "createdAt": "2022-12-12T17:35:42.000Z",
+        "updatedAt": "2022-12-12T17:35:42.000Z",
+        "roleId": 2
+    },
+    {
+        "id": 6,
+        "password": "$2a$10$LDg6gvKdVTqy5.4NvQfNY.fhjjCUmIzM4Mt7nsHV5GocFb6ujVSHu",
+        "name": "testing2",
+        "email": "testing2@test.com",
+        "profile_img": "",
+        "createdAt": "2022-12-15T18:47:24.000Z",
+        "updatedAt": "2022-12-15T19:24:26.000Z",
+        "roleId": 2
+    },
+    {
+        "id": 7,
+        "password": "$2a$10$qhybNxjo8ImwIgjOorz2i.M9Gtlyy5zdJfdX5HtEXOygWvk1V3NSW",
+        "name": "prueba1",
+        "email": "prueba1@gmail.com",
+        "profile_img": "",
+        "createdAt": "2022-12-15T18:48:18.000Z",
+        "updatedAt": "2022-12-15T18:48:18.000Z",
+        "roleId": 2
+    },
+    {
+        "id": 8,
+        "password": "$2a$10$KkGF3c4Jhhx88s.80LhlWeV0/oa66J8T/R4Hp5bKLJHVZI8OWJAIy",
+        "name": "D4rkKr1s",
+        "email": "d4rk@gmail.com",
+        "profile_img": "",
+        "createdAt": "2022-12-19T17:16:18.000Z",
+        "updatedAt": "2022-12-19T17:16:18.000Z",
+        "roleId": 2
+    },
+    {
+        "id": 9,
+        "password": "$2a$10$qEzeolEEaaZaZvZO0IMl5.KSI.gYHANVixBti18tox1Kkl1ZuoSVm",
+        "name": "Hola",
+        "email": "Hola@hola.com",
+        "profile_img": "",
+        "createdAt": "2022-12-19T20:11:06.000Z",
+        "updatedAt": "2022-12-19T20:11:06.000Z",
+        "roleId": 2
+    },
+    {
+        "id": 10,
+        "password": "$2a$10$rVOZJYeG8NmM8ktc54eN0.o2hySoKTQIpJ0prm9UHxEh/LnzU1jTe",
+        "name": "ttttt",
+        "email": "tttt@gmail.com",
+        "profile_img": "",
+        "createdAt": "2022-12-20T19:22:00.000Z",
+        "updatedAt": "2022-12-20T19:22:00.000Z",
+        "roleId": 2
+    },
+    {
+        "id": 11,
+        "password": "$2a$10$tkO5HipC9zM0u8meENnZTu0IfivAE40vFnz6guWne5Rub.okCSjF6",
+        "name": "test",
+        "email": "test@gmail.com",
+        "profile_img": "",
+        "createdAt": "2022-12-20T19:51:27.000Z",
+        "updatedAt": "2022-12-20T19:51:27.000Z",
+        "roleId": 2
+    },
+    {
+        "id": 12,
+        "password": "$2a$10$w9heTX16aTS6GunBa7celeY5QTYeFVTGX/cneQ3s1Gwy/ABzVknFS",
+        "name": "test2",
+        "email": "test2@gmail.com",
+        "profile_img": "",
+        "createdAt": "2022-12-20T19:51:52.000Z",
+        "updatedAt": "2022-12-20T19:51:52.000Z",
+        "roleId": 2
+    },
+    {
+        "id": 13,
+        "password": "$2a$10$wn5f9fe5y.C3bdTN24W4aOw9TgCyaEs51GNXTyJ8PAmUkRGQsp0wS",
+        "name": "tiburcio",
+        "email": "tiburcio@gmail.com",
+        "profile_img": "",
+        "createdAt": "2022-12-20T20:22:53.000Z",
+        "updatedAt": "2022-12-20T20:22:53.000Z",
+        "roleId": 1
+    },
+    {
+        "id": 14,
+        "password": "$2a$10$uPzVe7Vtj8Rp3UmCeFLPt.v3e1AcAaR3pIdHtth4K5Rgn8SZcgduK",
+        "name": "admin",
+        "email": "tiburcio",
+        "profile_img": "",
+        "createdAt": "2023-01-27T16:27:41.000Z",
+        "updatedAt": "2023-01-27T16:27:41.000Z",
+        "roleId": 2
+    },
+    {
+        "id": 15,
+        "password": "$2a$10$d7CANezvT9FMi8wgzPxjQOTWcpEQZoFNOR/.N8d/jl5ucVqLbtqc6",
+        "name": "admin",
+        "email": "admin@gmail.com",
+        "profile_img": "",
+        "createdAt": "2023-01-27T16:28:11.000Z",
+        "updatedAt": "2023-01-27T16:28:11.000Z",
+        "roleId": 1
+    },
+    {
+        "id": 16,
+        "password": "$2a$10$Eu2xJaA.IXZWNu5oyo3SM.7gmXge16r1VMCnAwcC/4iAKDni3SKK2",
+        "name": "testt",
+        "email": "testt@gmail.com",
+        "profile_img": "",
+        "createdAt": "2023-02-20T00:26:52.000Z",
+        "updatedAt": "2023-02-20T00:26:52.000Z",
+        "roleId": 2
+    },
+    {
+        "id": 17,
+        "password": "$2a$10$C7DbdjOGVrfiCvl5VGSQCeJk6s8l8QAuZ5oN/kbuOg5NJJMxhzETW",
+        "name": "testerrr",
+        "email": "testy@gmail.com",
+        "profile_img": "",
+        "createdAt": "2023-02-20T00:38:06.000Z",
+        "updatedAt": "2023-02-22T16:53:00.000Z",
+        "roleId": 2
+    },
+    {
+        "id": 19,
+        "password": "$2a$10$8ls3KV/Dja92j/xzXhM72OLsGoYrbNe.7uqFodSJDGiEBoamsqZCO",
+        "name": "tttttt",
+        "email": "ttttt@gmail.com",
+        "profile_img": "",
+        "createdAt": "2023-02-20T02:54:18.000Z",
+        "updatedAt": "2023-02-20T02:54:18.000Z",
+        "roleId": 2
+    },
+    {
+        "id": 20,
+        "password": "$2a$10$n3sSqzU8SYfuhcE41gp.pevMvLp6qvhllPT2LoGnkRmCFF7iY/yRq",
+        "name": "another",
+        "email": "another@gmail.com",
+        "profile_img": "",
+        "createdAt": "2023-02-20T02:55:03.000Z",
+        "updatedAt": "2023-02-20T02:55:03.000Z",
+        "roleId": 2
+    },
+    {
+        "id": 21,
+        "password": "$2a$10$PvPhCJvRiyp1.CXThhUwQOClKN9VU3JdqT8gOL9F7j9To8Qn1K042",
+        "name": "Nooooo",
+        "email": "no@gmail.com",
+        "profile_img": "",
+        "createdAt": "2023-02-20T02:58:28.000Z",
+        "updatedAt": "2023-02-20T03:27:39.000Z",
+        "roleId": 2
+    },
+    {
+        "id": 22,
+        "password": "$2a$10$R1NDiWF2DyjNaIvJZgwJW.TDY5oTd3b9uAdYSuLE7NxsrW1xflu/C",
+        "name": "nothing",
+        "email": "nothing@gmail.com",
+        "profile_img": "",
+        "createdAt": "2023-02-22T18:12:51.000Z",
+        "updatedAt": "2023-02-22T18:12:51.000Z",
+        "roleId": 2
+    },
+    {
+        "id": 23,
+        "password": "$2a$10$rx29qMrK1XYyUxLajEeBy.Jr8EC.QxLhzBUrEx5WfkCDQpKI3Y1PW",
+        "name": "nothingg",
+        "email": "nothingg@gmail.com",
+        "profile_img": "",
+        "createdAt": "2023-02-22T18:13:32.000Z",
+        "updatedAt": "2023-02-22T18:13:32.000Z",
+        "roleId": 2
+    }
+]

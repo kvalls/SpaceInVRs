@@ -44,12 +44,12 @@ exports.isAuthenticated = (req, res, next) => {
   // var token = req.body.token || req.query.token;
   var token = req.token;
 
-  // console.log('jsreport auth start');
-  // //console.log(req.body);
-  // console.log(token);
-  // //console.log(req.headers.authorization);
+  console.log('jsreport auth start');
+  console.log(req.body);
+  console.log(token);
+  console.log(req.headers.authorization);
   jsreportauth = Buffer.from('myUsername:myPassword').toString('base64')
-  // console.log('jsreport auth end');
+  console.log('jsreport auth end');
 
   if (req.headers.authorization === 'Basic ' + jsreportauth) {
     next();
@@ -96,6 +96,14 @@ exports.isAdmin = (req, res, next) => {
   // check header or url parameters or post parameters for token
   // var token = req.body.token || req.query.token;
   var token = req.token;
+
+  jsreportauth = Buffer.from('myUsername:myPassword').toString('base64')
+
+  if (req.headers.authorization === 'Basic ' + jsreportauth) {
+    next();
+    return;
+  }
+
   if (!token) {
     return res.status(400).json({
       error: true,

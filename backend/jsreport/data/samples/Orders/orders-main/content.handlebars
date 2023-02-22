@@ -18,17 +18,13 @@ Note: This example requires jsreport to be configured with
   </head>
   <body>
     {{#each orders}}
-        <!-- add hiden information to the page which is resolved in OrdersHeader template
-             during the pdf merge. See the docs about pdf utils extension for more details. -->
-        {{{pdfCreatePagesGroup country}}}
-        <canvas id='orders{{country}}' style="margin-bottom:30px"></canvas>
         <table class='table striped'>
             <thead>
                 <tr>
-                    <th>OrderID</th>
-                    <th>ShipAddress</th>
-                    <th>ShipCity</th>
-                    <th>ShipCountry</th>
+                    <th>UserID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Register Date</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,41 +38,6 @@ Note: This example requires jsreport to be configured with
                 {{/each}}
             </tbody>
         </table>
-
-        <script>
-            // convert data into js string using function from asset global helpers.js
-            // this results into something like var data = { "a": "foo" }
-            // which gets afterwards interpreted in chrome into object
-            var data = {{{toJS accumulated}}}
-
-            Chart.defaults.global.legend.display = false;
-
-            new Chart(orders{{country}}.getContext("2d"), {
-                type: 'bar',
-                data: {
-                    labels: Object.keys(data),
-                    datasets: [{
-                        fillColor: 'blue',
-                        label: "Orders in time",
-                        backgroundColor: "rgba(27,161,226,0.2)",
-                        borderColor: "rgba(27,161,226,1)",
-                        borderWidth: 1,
-                        hoverBackgroundColor: "rgba(27,161,226,0.4)",
-                        hoverBorderColor: "rgba(27,161,226,1)",
-                        data: Object.keys(data).map(function (o) {
-                            return data[o].value;
-                        })
-                    }]
-                },
-                options: {
-                    animation: {
-                        duration: 0
-                    }
-                }
-            });
-        </script>
-        <div style='page-break-after: always;'>
-        </div>
     {{/each}}
   </body>
 </html>

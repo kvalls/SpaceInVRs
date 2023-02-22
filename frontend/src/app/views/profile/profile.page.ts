@@ -22,7 +22,7 @@ export class ProfilePage implements OnInit {
   }
 
   ionViewDidEnter(){
-    this.getSessions();
+    // this.getSessions();
     // this.getOwnSessions();
   }
 

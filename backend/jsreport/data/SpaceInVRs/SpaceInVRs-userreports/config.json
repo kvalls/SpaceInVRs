@@ -1,0 +1,25 @@
+{
+    "name": "SpaceInVRs-userreports",
+    "recipe": "chrome-pdf",
+    "shortid": "VBoeQ25pc",
+    "engine": "handlebars",
+    "data": {
+        "shortid": "M3RzPtGUz"
+    },
+    "chrome": {
+        "printBackground": true
+    },
+    "creationDate": {
+        "$$date": 1677088266755
+    },
+    "modificationDate": {
+        "$$date": 1677090949148
+    },
+    "scripts": [
+        {
+            "shortid": "ncp-SPG0u"
+        }
+    ],
+    "_id": "D2ziCrzjoeXXMNvO",
+    "$entitySet": "templates"
+}

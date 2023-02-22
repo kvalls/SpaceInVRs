@@ -43,13 +43,12 @@ export class AuthService {
     let bodyEncoded = new URLSearchParams();
     bodyEncoded.append("name", user.name);
     const body = bodyEncoded.toString();
-
     return this.httpClient.post<AuthResponse>(`${this.AUTH_SERVER_ADDRESS}/api/users/`, body, this.getOptions(user)).pipe(
       tap(async (res:  AuthResponse ) => {
 
         if (res.user) {
-          this.storage.set("token", res.access_token);
-          this.storage.set("userdata", res.user);
+          await this.storage.set("token", res.access_token);
+          await this.storage.set("userdata", res.user);
         }
       })
 

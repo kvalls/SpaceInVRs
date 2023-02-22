@@ -11,8 +11,12 @@ export class ReportsComponent implements OnInit {
 
   ngOnInit() {}
 
-  handleClick() {
+  allReportsClick() {
     window.location.replace('http://localhost:5488/templates/g-UQf7YbRO');
+  }
+
+  allUsersClick() {
+    window.location.replace('http://localhost:5488/templates/VBoeQ25pc');
   }
 
 }

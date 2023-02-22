@@ -1,0 +1,13 @@
+{
+    "scope": "template",
+    "name": "SpaceInVRs-userreportsscript",
+    "shortid": "ncp-SPG0u",
+    "creationDate": {
+        "$$date": 1677088510667
+    },
+    "modificationDate": {
+        "$$date": 1677090737715
+    },
+    "_id": "uC35BF0V7gYfDpkG",
+    "$entitySet": "scripts"
+}

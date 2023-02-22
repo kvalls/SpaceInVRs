@@ -14,7 +14,7 @@ module.exports = app => {
     router.get("/:id", auth.isAuthenticated, auth.isAdmin, sessions.findOne);
 
     // Retrieve all sessions equals an id
-    router.get("/user/:id", auth.isAuthenticated, auth.isAdmin, sessions.findAllByUserId);
+    router.get("/user/:id", auth.isAuthenticated, sessions.findAllByUserId);
 
     // Update a Sessions with id
     router.put("/:id", auth.isAuthenticated, auth.isAdmin, sessions.update);

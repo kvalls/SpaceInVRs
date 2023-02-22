@@ -2,9 +2,7 @@
     "name": "SpaceInVRs-main",
     "engine": "handlebars",
     "recipe": "chrome-pdf",
-    "data": {
-        "shortid": "44EIOSaAC"
-    },
+    "data": null,
     "shortid": "g-UQf7YbRO",
     "chrome": {
         "printBackground": true
@@ -13,7 +11,7 @@
         "$$date": 1674820639858
     },
     "modificationDate": {
-        "$$date": 1674843496818
+        "$$date": 1677090742921
     },
     "_id": "QsaSlXETlAiprs-C",
     "$entitySet": "templates",

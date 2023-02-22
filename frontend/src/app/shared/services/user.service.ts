@@ -74,6 +74,18 @@ export class UserService {
     );
   }
 
+  deleteUser(token, user: User): Observable<AuthResponse> {
+    let myOptions = this.getOptions(token);
+    return this.httpClient.delete<AuthResponse>(`${this.AUTH_SERVER_ADDRESS}/api/users/` + user.id, myOptions).pipe(
+        tap(async (res: AuthResponse) => {
+          // await this.storage.set("token", res.access_token);
+          // await this.storage.set("userdata", res.user);
+          console.log(`User deleted: ${user.id}`)
+        }),
+        catchError(this.handleError<AuthResponse>(`Update user`))
+      );
+  }
+
 
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {

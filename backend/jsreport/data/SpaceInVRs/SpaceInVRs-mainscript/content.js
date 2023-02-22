@@ -26,17 +26,17 @@ console.log('AAAAAAAAAAAAAAAAAAAAAAA ' , req);
         })
     }
 
-    console.log(req.data.sessions[0].score)
+    // console.log(req.data.sessions[0].score)
 
-    req.data.score = req.data.sessions.score;
-    req.data.ships_destroyed = req.data.sessions.ships_destroyed;
-    req.data.bullets_fired = req.data.sessions.bullets_fired;
-    req.data.powerups = req.data.sessions.powerups;
-    req.data.user_id = req.data.sessions.user_id;
+    // req.data.score = req.data.sessions.score;
+    // req.data.ships_destroyed = req.data.sessions.ships_destroyed;
+    // req.data.bullets_fired = req.data.sessions.bullets_fired;
+    // req.data.powerups = req.data.sessions.powerups;
+    // req.data.user_id = req.data.sessions.user_id;
     
 
-    console.log("Aquí el score: " + req.data.sessions.score);
-    console.log("Aquí las naves destruidas: " + req.data.ships_destroyed);
+    // console.log("Aquí el score: " + req.data.sessions.score);
+    // console.log("Aquí las naves destruidas: " + req.data.ships_destroyed);
 
     const resUsers = await axios.get('http://localhost:4000/api/users', options)
     // console.log(resUsers)

@@ -11,7 +11,7 @@ import { BaseChartDirective } from 'ng2-charts';
 import { Storage } from '@ionic/storage';
 
 import DataLabelsPlugin from 'chartjs-plugin-datalabels';
-import { ViewDidEnter, ViewWillEnter } from '@ionic/angular';
+import { ViewDidEnter, ViewWillEnter, AlertController } from '@ionic/angular';
 
 
 @Component({
@@ -27,6 +27,7 @@ export class ProfileCardComponent implements OnInit, ViewDidEnter {
 
   ownSessions: any = [];
   ionicForm: FormGroup;
+  deleteUser = false;
   isSubmitted: boolean = false;
   user: User;
   capturedPhoto: string = "";
@@ -38,7 +39,8 @@ export class ProfileCardComponent implements OnInit, ViewDidEnter {
     private storage: Storage,
     private sessionService: SessionService,
     private router: Router,
-    public formBuilder: FormBuilder) { }
+    public formBuilder: FormBuilder,
+    private alertController: AlertController) { }
 
   ngOnInit() {
 
@@ -51,7 +53,7 @@ export class ProfileCardComponent implements OnInit, ViewDidEnter {
       this.ionicForm.setValue({
         name: this.user.name,
         email: this.user.email,
-        password: this.user.password
+        password: ''
       });
     });
 
@@ -61,13 +63,6 @@ export class ProfileCardComponent implements OnInit, ViewDidEnter {
       password: ['', [Validators.required, Validators.minLength(4)]]
     })
     this.getOwnSessions();
-
-    // this.userService.getUser(this.user);
-    // this.updateChart();
-  }
-
-  handleClick() {
-    // window.location.replace('http://localhost:5488/templates/g-UQf7YbRO');
   }
 
   refreshModal(){
@@ -76,7 +71,7 @@ export class ProfileCardComponent implements OnInit, ViewDidEnter {
       this.ionicForm.setValue({
         name: this.user.name,
         email: this.user.email,
-        password: this.user.password
+        password: ''
       });
     });
 
@@ -88,10 +83,6 @@ export class ProfileCardComponent implements OnInit, ViewDidEnter {
 
     this.authService.getUserData().then((data) => {
       this.user = data;
-      // console.log("holaola "+this.user.id+" holaola");
-      // console.log("holaola "+this.user.role_id+" holaola");
-      // console.log("eeee ",this.user," eeee");
-      // console.log("eeee ",this.user.email," eeee");
     });
 
     this.ionicForm = this.formBuilder.group({
@@ -128,6 +119,70 @@ export class ProfileCardComponent implements OnInit, ViewDidEnter {
     return this.ionicForm.controls;
   }
 
+  public onDeleteClick(): void {
+    this.deleteUser = true;
+  }
+
+  public onUpdateClick(): void {
+    this.deleteUser = false;
+  }
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Warning:',
+      message: 'Delete account?',
+      buttons: [
+        {
+          text: 'Cancel'
+        },
+        {
+          text: 'Confirm',
+          handler: () => {
+            this.delete();
+          },
+        },
+      ],
+    });
+
+    await alert.present();
+
+  }
+
+
+  public onSubmit(): void {
+    if(this.deleteUser) {
+      this.presentAlert();
+    }else {
+      this.update();
+    }
+
+  }
+
+  async delete() {
+    let token = await this.storage.get("token");
+    this.isSubmitted = true;
+    if (!this.ionicForm.valid) {
+      console.log('Please provide all the required values!')
+      return false;
+    } else {
+      let user: User = {
+        id: this.user.id,
+        email: this.ionicForm.value.email,
+        password: this.ionicForm.value.password,
+        name: this.ionicForm.value.name,
+      };
+      
+      this.userService.deleteUser(token, user).subscribe((res) => {
+        this.authService.logout();
+        this.router.navigateByUrl('/home');
+        setTimeout(() => {
+          location.reload()
+        }, 1000);
+      });
+    }
+  }
+
   async update() {
     let token = await this.storage.get("token");
     this.isSubmitted = true;
@@ -147,12 +202,29 @@ export class ProfileCardComponent implements OnInit, ViewDidEnter {
         email: this.ionicForm.value.email,
         password: this.ionicForm.value.password,
         name: this.ionicForm.value.name,
-        // role_id: 2,
       };
       console.log('huh??')
       this.userService.updateUser(token, user, blob).subscribe((res) => {
-        this.ionicForm.reset();
-        this.router.navigateByUrl('/home');  
+        this.authService.login(user).subscribe((res) => {
+          if (!res.access_token) {
+            console.log("invalid credentials");
+            return;
+          }
+
+          this.ionicForm.setValue({
+            name: this.ionicForm.value.name,
+            email: this.ionicForm.value.email,
+            password: this.ionicForm.value.password
+          });
+        }, err => {
+          console.log("Error");
+        });
+
+        this.router.navigateByUrl('/profile');
+        this.router.navigate([this.router.url])
+        setTimeout(() => {
+          location.reload()
+        }, 1000);
       });
     }
     
@@ -164,13 +236,6 @@ export class ProfileCardComponent implements OnInit, ViewDidEnter {
     let data = await this.storage.get("userdata");
     let id = data.id;
     let token = await this.storage.get("token");
-
-    // this.authService.getUserData().then((data) => {
-    //   this.user = data;
-    //   console.log("holaola "+this.user.id+" holaola");
-    //   console.log("holaola "+this.user.role_id+" holaola");
-    //   console.log("eeee ",this.user," eeee");
-    // });
     console.log("PROFILECARD");
     console.log(data.id);
 
@@ -203,13 +268,6 @@ export class ProfileCardComponent implements OnInit, ViewDidEnter {
       
       console.log(`The highest score is ${this.highestScore}`);
 
-      // this.ownScoresLabels = this.ownScoresLabels.map(date => {
-      //   const d = new Date(date);
-      //   const month = (d.getMonth() + 1).toString().padStart(2, '0'); // add leading zero if necessary
-      //   const day = d.getDate().toString().padStart(2, '0'); // add leading zero if necessary
-      //   return `${month}-${day}`;
-      // });
-
       console.log(this.ownScores);
       console.log(this.ownScoresLabels);
       this.updateChart();
@@ -217,7 +275,6 @@ export class ProfileCardComponent implements OnInit, ViewDidEnter {
     }, error => {
       console.log(error);
       console.log("User not authenticated. Please log in");
-      //this.router.navigateByUrl("/home");
     });
   }
   
@@ -259,7 +316,10 @@ export class ProfileCardComponent implements OnInit, ViewDidEnter {
   // events
   public chartClicked({ event, active }: { event?: ChartEvent, active?: {}[] }): void {
     console.log(event, active);
-    this.chart?.update();
+    this.ownScores.length = 0; // Clear existing array
+    this.ownScoresLabels.length = 0; // Clear existing array
+    // this.chart?.update();
+    this.getOwnSessions();
   }
 
   public chartHovered({ event, active }: { event?: ChartEvent, active?: {}[] }): void {
@@ -268,16 +328,6 @@ export class ProfileCardComponent implements OnInit, ViewDidEnter {
   }
 
   public updateChart(): void {
-    // Only Change 3 values
-    // this.barChartData.datasets[0].data = [
-    //   Math.round(Math.random() * 100),
-    //   59,
-    //   80,
-    //   Math.round(Math.random() * 100),
-    //   56,
-    //   Math.round(Math.random() * 100),
-    //   40 ];
-
     this.chart?.update();
   }
 
