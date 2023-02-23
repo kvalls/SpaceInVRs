@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "jest",
-    "test:coverage": "jest --coverage",
+    "test": "jest --config",
+    "test:coverage": "jest --config jest.config.json",
     "start": "node server.js"
   },
   "author": "",
