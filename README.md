@@ -25,6 +25,7 @@ This project was assigned by Aiju.
 * [User requirements](/documentation/user_requirements.md)
 * [Use cases](/documentation/use_cases.md)
 * [Prototype](/documentation/prototype.md)
+* [Usability](/documentation/usability.md)
 
 ## Prerequisites
 
