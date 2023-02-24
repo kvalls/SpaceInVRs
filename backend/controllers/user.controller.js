@@ -6,8 +6,8 @@ const  bcrypt  =  require('bcryptjs');
 
 // Create and Save a new User
 exports.create = (req, res) => {
-  console.log("testingggggg "+JSON.stringify(req.params));
-  console.log("testyggggggggg "+JSON.stringify(req.body));
+  // console.log("testingggggg "+JSON.stringify(req.params));
+  // console.log("testyggggggggg "+JSON.stringify(req.body));
   //Validate request
   if (!req.body.password || !req.body.email) {
     res.status(400).send({
@@ -96,9 +96,9 @@ exports.findOne = (req, res) => {
 
 // Update a User by the id in the request
 exports.update = (req, res) => {
-  console.log("test "+JSON.stringify(req.params));
-  console.log("testy "+JSON.stringify(req.body));
-  console.log("testy2 "+JSON.stringify(req.file))
+  // console.log("test "+JSON.stringify(req.params));
+  // console.log("testy "+JSON.stringify(req.body));
+  // console.log("testy2 "+JSON.stringify(req.file))
   req.body.password = bcrypt.hashSync(req.body.password);
 
 

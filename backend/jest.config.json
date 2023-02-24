@@ -12,7 +12,8 @@
       "<rootDir>/src/app/main.ts",
       ".mock.ts",
       "jsreport",
-      "coverage"
+      "coverage",
+      "multer"
   ],
   "coverageThreshold": {
       "global": {

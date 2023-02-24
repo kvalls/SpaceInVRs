@@ -20,7 +20,7 @@ exports.signin = (req, res) => {
   // return 401 status if the credential is not match.
   User.findOne({ where: { email: user } })
     .then(data => {
-      console.log("HOLA AQUÍ"+data.email);
+      // console.log("HOLA AQUÍ"+data.email);
       const result = bcrypt.compareSync(pwd, data.password);
       if (!result) return res.status(401).send('Password not valid!');
 
@@ -44,12 +44,12 @@ exports.isAuthenticated = (req, res, next) => {
   // var token = req.body.token || req.query.token;
   var token = req.token;
 
-  console.log('jsreport auth start');
-  console.log(req.body);
-  console.log(token);
-  console.log(req.headers.authorization);
+  // console.log('jsreport auth start');
+  // console.log(req.body);
+  // console.log(token);
+  // console.log(req.headers.authorization);
   jsreportauth = Buffer.from('myUsername:myPassword').toString('base64')
-  console.log('jsreport auth end');
+  // console.log('jsreport auth end');
 
   if (req.headers.authorization === 'Basic ' + jsreportauth) {
     next();

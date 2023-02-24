@@ -1,4 +1,4 @@
-<div  class="buttons">
+<div *ngIf="isAdmin" class="buttons">
   <ion-button size="large" (click)="allReportsClick()" expand="block">All sessions report</ion-button>
   <ion-button size="large" (click)="allUsersClick()" expand="block">All users report</ion-button>
 </div>
