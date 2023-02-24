@@ -22,7 +22,9 @@
             <ion-row>
               <ion-col class="modalimage">
                 <ion-img class="image" *ngIf="capturedPhoto" [src]="capturedPhoto" (click)="takePhoto()"></ion-img>
-                <ion-img class="image" *ngIf="!capturedPhoto" src="../../assets/icon/imgplaceholder.png"
+                <ion-img class="image" *ngIf="(!capturedPhoto) && (user.profile_img)" src="http://localhost:4000/images/{{user.profile_img}}"
+                  (click)="takePhoto()"></ion-img>
+                  <ion-img class="image" *ngIf="(!capturedPhoto) && (!user.profile_img)" src="../../assets/icon/imgplaceholder.png"
                   (click)="takePhoto()"></ion-img>
               </ion-col>
               <ion-col position="absolute">
@@ -59,7 +61,7 @@
                       Name should be min 2 chars long.
                     </span>
                     <ion-item>
-                      <ion-input formControlName="name" name="name" type="name" placeholder="Name"></ion-input>
+                      <ion-input formControlName="name" name="name" type="text" placeholder="Name"></ion-input>
                     </ion-item>
                     <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.required">
                       Email is required.
@@ -68,7 +70,7 @@
                       Please provide a valid email.
                     </span>
                     <ion-item>
-                      <ion-input formControlName="email" name="email" type="email" placeholder="Email" 
+                      <ion-input formControlName="email" name="email" type="text" placeholder="Email" 
                         required></ion-input>
                     </ion-item>
                     <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.required">
@@ -78,7 +80,7 @@
                       Password should be min 4 chars long.
                     </span>
                     <ion-item>
-                      <ion-input class="lastitem" formControlName="password" name="password" type="password"
+                      <ion-input class="lastitem" formControlName="password" name="password" type="text"
                         placeholder="Password" required></ion-input>
                     </ion-item>
                     <!-- <ion-item>

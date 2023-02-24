@@ -46,10 +46,11 @@ export class ProfileCardComponent implements OnInit, ViewDidEnter {
 
     this.authService.getUserData().then((data) => {
       this.user = data;
-      // console.log("holaola "+this.user.id+" holaola");
-      // console.log("holaola "+this.user.role_id+" holaola");
-      // console.log("eeee ",this.user," eeee");
-      // console.log("eeee ",this.user.email," eeee");
+
+      console.log("holaola "+this.user.id+" holaola");
+      console.log("holaola "+this.user.role_id+" holaola");
+      console.log("eeee ",this.user," eeee");
+      console.log("eeee ",this.user.email," eeee");
       this.ionicForm.setValue({
         name: this.user.name,
         email: this.user.email,
@@ -63,6 +64,38 @@ export class ProfileCardComponent implements OnInit, ViewDidEnter {
       password: ['', [Validators.required, Validators.minLength(4)]]
     })
     this.getOwnSessions();
+  }
+
+
+
+  ionViewDidEnter() {
+    // console.log(this.authService.getUserData());
+    // this.updateChart();
+
+    this.authService.getUserData().then((data) => {
+      this.user = data;
+
+    });
+
+    this.ionicForm = this.formBuilder.group({
+      name: ['', [Validators.required, Validators.minLength(2)]],
+      email: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
+      password: ['', [Validators.required, Validators.minLength(4)]]
+    })
+
+    this.getOwnSessions();
+    this.isSubmitted = false;
+    this.capturedPhoto = "";
+  }
+
+  fetchUser(id){
+    this.userService.getUser(id).subscribe((data) => {
+      this.ionicForm.setValue({
+        name: data['name'],
+        email: data['email'],
+        password: ''
+      });
+    });
   }
 
   refreshModal(){
@@ -75,25 +108,6 @@ export class ProfileCardComponent implements OnInit, ViewDidEnter {
       });
     });
 
-  }
-
-  ionViewDidEnter() {
-    // console.log(this.authService.getUserData());
-    // this.updateChart();
-
-    this.authService.getUserData().then((data) => {
-      this.user = data;
-    });
-
-    this.ionicForm = this.formBuilder.group({
-      name: ['', [Validators.required, Validators.minLength(2)]],
-      email: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
-      password: ['', [Validators.required, Validators.minLength(4)]]
-    })
-
-    this.getOwnSessions();
-    this.isSubmitted = false;
-    this.capturedPhoto = "";
   }
 
   takePhoto() {

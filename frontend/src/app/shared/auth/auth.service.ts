@@ -63,6 +63,7 @@ export class AuthService {
           this.setLoginStatus(1);
           this.storage.set("token", res.access_token);
           this.storage.set("userdata", res.user);
+          console.log("eyyyyyy "+res.user.profile_img+" eyyyyyy");
           console.log("ey "+res.user.id+" ey");
           console.log("uy "+res.user.role_id+" uy");
         }

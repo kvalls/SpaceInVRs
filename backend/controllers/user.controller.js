@@ -21,7 +21,7 @@ exports.create = (req, res) => {
     password: req.body.password,
     name: req.body.name,
     email: req.body.email,
-    profile_img: req.file? req.file.profile_img : "",
+    profile_img: req.file ? req.file.filename : "",
     role_id: req.body.role_id
   };
   User.findOne({ where: { email: user.email } })
@@ -98,6 +98,7 @@ exports.findOne = (req, res) => {
 exports.update = (req, res) => {
   console.log("test "+JSON.stringify(req.params));
   console.log("testy "+JSON.stringify(req.body));
+  console.log("testy2 "+JSON.stringify(req.file))
   req.body.password = bcrypt.hashSync(req.body.password);
 
 
@@ -106,7 +107,7 @@ exports.update = (req, res) => {
     password: req.body.password,
     name: req.body.name,
     email: req.body.email,
-    profile_img: req.file? req.file.profile_img : "",
+    profile_img: req.file ? req.file.filename : "",
     role_id: req.body.role_id
   };
   const id = req.params.id;

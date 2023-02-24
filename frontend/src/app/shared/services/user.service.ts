@@ -30,6 +30,20 @@ export class UserService {
     return options;
   }
 
+  private getOptions2(token) {
+
+    let bearerAccess = 'Bearer ' + token;
+
+    let options = {
+      headers: {
+        'Authorization': bearerAccess
+      }
+      //, withCredentials: true
+    };
+
+    return options;
+  }
+
   getUsers(token) {
     let myOptions = this.getOptions(token);
     console.log(myOptions)
@@ -52,21 +66,21 @@ export class UserService {
   }
 
   updateUser(token, user: User, blob): Observable<AuthResponse> {
-    let myOptions = this.getOptions(token);
-    let bodyEncoded = new URLSearchParams();
+    let myOptions = this.getOptions2(token);
+    let bodyEncoded = new FormData();
     bodyEncoded.append("name", user.name);
     bodyEncoded.append("email", user.email);
     bodyEncoded.append("password", user.password);
     bodyEncoded.append("file", blob);
-    const body = bodyEncoded.toString();
+    // const body = bodyEncoded.toString();
     console.log("what " + bodyEncoded);
 
-    return this.httpClient.put<AuthResponse>(`${this.AUTH_SERVER_ADDRESS}/api/users/` + user.id, body, myOptions).pipe(
+    return this.httpClient.put<AuthResponse>(`${this.AUTH_SERVER_ADDRESS}/api/users/` + user.id, bodyEncoded, myOptions).pipe(
       tap(async (res: AuthResponse) => {
 
         // await this.storage.set("token", res.access_token);
         // await this.storage.set("userdata", res.user);
-        console.log(body);
+        // console.log(body);
         console.log(`User updated: ${user.id}`)
       }),
       catchError(this.handleError<AuthResponse>(`Update user`))
