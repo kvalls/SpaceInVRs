@@ -111,3 +111,18 @@
 - If you click on "Delete", an alert window will pop up warning you, so you don't accidentally delete your account:
 
 ![image](https://user-images.githubusercontent.com/95490470/221255648-4cd7a24e-8ded-4902-983c-041c38eb35fa.png)
+
+
+## Game
+- Game takes place in one place, and all enemies come from the same side, except at different heights and distances. This provides a fun and dynamic experience that kinda feels like a shooting gallery. As your movements are restricted mainly to moving your head only a bit and your hand to aim and avoid bullets, this makes the game not as dizzy to play in VR as others.
+
+- Enemies are color-coded in regards to how dangerous they are:
+  - Green enemies take around 4 seconds to shoot.
+  - Yellow enemies take around 2.5 seconds to shoot.
+  - Purple and white enemies shoot every second.
+  ![image](https://user-images.githubusercontent.com/103140108/221263851-7e4a4460-6bd6-4f29-bb9d-f8fa7fdc6fee.png)
+  
+  This makes them easy to distinct.
+  
+- The game is paused as soon as you let go off the grip button to make pausing the game quick and easy.
+  ![image](https://user-images.githubusercontent.com/103140108/221267447-3240ba1f-d990-4b33-8eac-13f9b4573597.png)
